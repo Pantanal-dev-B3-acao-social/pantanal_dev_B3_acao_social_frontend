@@ -1,0 +1,20 @@
+.dialog-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+
+  .btn-confirm-delete {
+    color: red;
+  }
+}
+
+.btn-save {
+  color: green;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}

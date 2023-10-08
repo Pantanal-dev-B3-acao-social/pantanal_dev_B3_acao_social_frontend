@@ -1,0 +1,32 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Name",
+      "scope": "#/properties/name"
+    },
+    {
+      "type": "Control",
+      "label": "Description",
+      "scope": "#/properties/description"
+    },
+    {
+      "type": "Control",
+      "label": "Code",
+      "scope": "#/properties/code"
+    },
+    {
+      "type": "Control",
+      "label": "Visibility",
+      "scope": "#/properties/visibility"
+    },
+    {
+      "type": "Control",
+      "label": "Category Group",
+      "scope": "#/properties/categoryGroup"
+      // Defina o UI Schema para a entidade CategoryGroupEntity aqui
+    }
+    // Defina os elementos UI para as listas categorySocialActionTypeEntities e categorySocialActionLevelEntities, se necessário
+  ]
+}

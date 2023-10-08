@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
+}
