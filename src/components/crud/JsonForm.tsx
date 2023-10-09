@@ -34,15 +34,16 @@ const JsonForm = ({
   const [schema, setSchema] = useState<JsonSchema>({});
 
   useEffect(() => {
-    api?.getSchema?.().then((schema) => {
-      setSchema(schema);
-    });
+    // api?.getSchema?.().then((schema) => {
+    //   setSchema(schema);
+    // });
   }, [api]);
 
   return (
     <Fragment>
       <div className={classes.demoform}>
         <JsonForms
+          // schema={schema}
           schema={schema}
           uischema={uischema}
           data={data}

@@ -2,7 +2,7 @@ import { JsonSchema } from "@jsonforms/core";
 import { client } from "../config/axios-config";
 
 export interface FormApi {
-  getSchema: () => Promise<JsonSchema>;
+  // getSchema: () => Promise<JsonSchema>;
   get: (id: number) => Promise<any>;
   getAll: () => Promise<any>;
   put: (id: number, data: any) => Promise<any>;
@@ -13,10 +13,10 @@ export interface FormApi {
 export class GenericApi implements FormApi {
   constructor(private readonly url: string) {}
 
-  async getSchema(): Promise<JsonSchema> {
-    const response = await client.get<JsonSchema>(`${this.url}/schema`);
-    return response.data;
-  }
+  // async getSchema(): Promise<JsonSchema> {
+  //   const response = await client.get<JsonSchema>(`${this.url}/schema`);
+  //   return response.data;
+  // }
 
   async get(id: number): Promise<any> {
     const response = await client.get<any>(`${this.url}/${id}`);
@@ -28,7 +28,7 @@ export class GenericApi implements FormApi {
     return response?.data?.data;
   }
 
-  async put(id:number, data: any): Promise<any> {
+  async put(id: number, data: any): Promise<any> {
     const response = await client.put<any>(`${this.url}/${id}`, data);
     return response;
   }
@@ -38,7 +38,7 @@ export class GenericApi implements FormApi {
     return response;
   }
 
-  async delete(id:number): Promise<any> {
+  async delete(id: number): Promise<any> {
     const response = await client.delete<any>(`${this.url}/${id}`);
     return response;
   }
@@ -46,4 +46,4 @@ export class GenericApi implements FormApi {
 
 export const makeApi = (url: string) => {
   return new GenericApi(url);
-}
+};
