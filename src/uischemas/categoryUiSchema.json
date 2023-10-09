@@ -25,8 +25,6 @@
       "type": "Control",
       "label": "Category Group",
       "scope": "#/properties/categoryGroup"
-      // Defina o UI Schema para a entidade CategoryGroupEntity aqui
     }
-    // Defina os elementos UI para as listas categorySocialActionTypeEntities e categorySocialActionLevelEntities, se necessário
   ]
 }

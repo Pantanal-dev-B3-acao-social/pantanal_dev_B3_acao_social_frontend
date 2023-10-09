@@ -1,16 +1,31 @@
-import { UISchemaElement } from "@jsonforms/core";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import DoneIcon from '@mui/icons-material/Done';
-import EditIcon from '@mui/icons-material/Edit';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
+import { JsonSchema, UISchemaElement } from "@jsonforms/core";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import DoneIcon from "@mui/icons-material/Done";
+import EditIcon from "@mui/icons-material/Edit";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+} from "@mui/material";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
 import DataTable from "./DataTable";
 import JsonForm from "./JsonForm";
-import './crud.css';
+import "./crud.css";
 import { HeadCell } from "./headCell";
 
-export function Crud<T extends Record<string, any>>({ headCells, checkboxes, title, uischema, apiUrl, hideDelete }: CrudProps<T>) {
+export function Crud<T extends Record<string, any>>({
+  headCells,
+  checkboxes,
+  title,
+  uischema,
+  schema,
+  apiUrl,
+  hideDelete,
+}: CrudProps<T>) {
   const [list, setList] = React.useState(true);
   const [edit, setEdit] = React.useState(false);
   const [view, setView] = React.useState(false);
@@ -108,7 +123,6 @@ export function Crud<T extends Record<string, any>>({ headCells, checkboxes, tit
     setTimeout(() => setId(-1), 100);
   };
 
-
   return (
     <>
       {list && (
@@ -128,6 +142,7 @@ export function Crud<T extends Record<string, any>>({ headCells, checkboxes, tit
         <>
           <JsonForm
             uischema={uischema}
+            schema={schema}
             data={apiData}
             onChange={({ errors, data }) => setFormData(data)}
             readonly={view}
@@ -139,7 +154,13 @@ export function Crud<T extends Record<string, any>>({ headCells, checkboxes, tit
               Voltar
             </Button>
             {view && (
-              <Button className="btn-edit" onClick={() => { setView(!view); setEdit(!edit); }}>
+              <Button
+                className="btn-edit"
+                onClick={() => {
+                  setView(!view);
+                  setEdit(!edit);
+                }}
+              >
                 <EditIcon></EditIcon>
                 Editar
               </Button>
@@ -165,8 +186,12 @@ export function Crud<T extends Record<string, any>>({ headCells, checkboxes, tit
           </DialogContentText>
         </DialogContent>
         <DialogActions className="dialog-actions">
-          <Button className="btn-cancel-delete" onClick={handleCloseDelete}>Cancelar</Button>
-          <Button className="btn-confirm-delete" onClick={destroy}>Sim, tenho certeza</Button>
+          <Button className="btn-cancel-delete" onClick={handleCloseDelete}>
+            Cancelar
+          </Button>
+          <Button className="btn-confirm-delete" onClick={destroy}>
+            Sim, tenho certeza
+          </Button>
         </DialogActions>
       </Dialog>
     </>
@@ -178,6 +203,7 @@ type CrudProps<T> = {
   checkboxes?: boolean;
   title?: string;
   uischema: UISchemaElement;
+  schema: JsonSchema;
   apiUrl: string;
   hideDelete?: boolean;
-}
+};

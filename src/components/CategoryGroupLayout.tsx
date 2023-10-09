@@ -1,4 +1,5 @@
-import uischema from "../uischemas/category.json";
+import { CategoryGroupSchema } from "../schema/categoryGroupSchema";
+import uischema from "../uischemas/categoryUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
@@ -10,35 +11,36 @@ interface Data extends Record<string, any> {
 }
 
 const headCells: readonly HeadCell<Data>[] = [
+  // {
+  //   id: "id",
+  //   numeric: true,
+  //   disablePadding: false,
+  //   label: "ID",
+  // },
   {
-    id: "id",
-    numeric: true,
-    disablePadding: false,
-    label: "ID",
-  },
-  {
-    id: "nome",
+    id: "name",
     numeric: false,
     disablePadding: false,
     label: "Nome",
   },
   {
-    id: "codigo",
+    id: "description",
     numeric: false,
     disablePadding: false,
-    label: "Código",
+    label: "Descrição",
   },
 ];
 
-function Category() {
+function CategoryGroupLayout() {
   return (
     <Crud<Data>
       headCells={headCells}
       title="Category"
       uischema={uischema}
-      apiUrl={"/category"}
+      schema={CategoryGroupSchema}
+      apiUrl={"/v1/category-group"}
     ></Crud>
   );
 }
 
-export default Category;
+export default CategoryGroupLayout;

@@ -1,7 +1,7 @@
-import { makeStyles } from '@mui/styles';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './layout.css'
+import { makeStyles } from "@mui/styles";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./layout.css";
 
 const useStyles = makeStyles({
   container: {
@@ -15,16 +15,19 @@ function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={classes.container}>
-      <nav className='menu'>
+      <nav className="menu">
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/banco">Banco</Link>
+            <Link to="/usuario">Usuário</Link>
           </li>
           <li>
-            <Link to="/usuario">Usuário</Link>
+            <Link to="/grupo-categoria">Grupo Categoria</Link>
+          </li>
+          <li>
+            <Link to="/categoria">Categoria</Link>
           </li>
         </ul>
       </nav>

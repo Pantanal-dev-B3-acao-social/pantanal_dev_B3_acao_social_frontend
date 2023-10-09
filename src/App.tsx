@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Banco from "./components/Banco";
 import Home from "./components/Home";
 import Layout from "./components/layout/Layout";
 import NotFound from "./components/layout/NotFound";
-import Usuario from "./components/Usuario";
+import UserLayout from "./components/UserLayout";
+import CategoryGroupLayout from "./components/CategoryGroupLayout";
 
 const App = () => {
   return (
@@ -15,8 +15,11 @@ const App = () => {
             <Layout>
               <Routes>
                 <Route index element={<Home />} />
-                <Route path="/banco" element={<Banco />} />
-                <Route path="/usuario" element={<Usuario />} />
+                <Route path="/usuario" element={<UserLayout />} />
+                <Route
+                  path="/grupo-categoria"
+                  element={<CategoryGroupLayout />}
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

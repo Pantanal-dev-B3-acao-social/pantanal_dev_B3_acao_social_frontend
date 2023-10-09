@@ -1,6 +1,7 @@
-import uischema from '../uischemas/usuario.json';
+import uischema from "../uischemas/userUiSchema.json";
+import { UserSchema } from "../schema/userSchema";
 import { Crud } from "./crud/Crud";
-import { HeadCell } from './crud/headCell';
+import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
   id: number;
@@ -11,34 +12,35 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: 'id',
+    id: "id",
     numeric: true,
     disablePadding: false,
-    label: 'ID',
+    label: "ID",
   },
   {
-    id: 'nome',
+    id: "nome",
     numeric: false,
     disablePadding: false,
-    label: 'Nome',
+    label: "Nome",
   },
   {
-    id: 'email',
+    id: "email",
     numeric: false,
     disablePadding: false,
-    label: 'email',
+    label: "email",
   },
 ];
 
-function Usuario() {
+function UserLayout() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title='Usuário'
+      title="Usuário"
       uischema={uischema}
-      apiUrl={'/usuario'}
+      schema={UserSchema}
+      apiUrl={"/usuario"}
     ></Crud>
-  )
+  );
 }
 
-export default Usuario;
+export default UserLayout;

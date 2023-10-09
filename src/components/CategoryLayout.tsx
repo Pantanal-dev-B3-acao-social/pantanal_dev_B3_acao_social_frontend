@@ -1,6 +1,7 @@
-import uischema from '../uischemas/banco.json';
+import { CategorySchema } from "../schema/categorySchema";
+import uischema from "../uischemas/categoryUiSchema.json";
 import { Crud } from "./crud/Crud";
-import { HeadCell } from './crud/headCell';
+import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
   id: number;
@@ -11,34 +12,35 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: 'id',
+    id: "id",
     numeric: true,
     disablePadding: false,
-    label: 'ID',
+    label: "ID",
   },
   {
-    id: 'nome',
+    id: "nome",
     numeric: false,
     disablePadding: false,
-    label: 'Nome',
+    label: "Nome",
   },
   {
-    id: 'codigo',
+    id: "codigo",
     numeric: false,
     disablePadding: false,
-    label: 'Código',
+    label: "Código",
   },
 ];
 
-function Banco() {
+function Category() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title='Banco'
+      title="Category"
       uischema={uischema}
-      apiUrl={'/banco'}
+      schema={CategorySchema}
+      apiUrl={"/category"}
     ></Crud>
-  )
+  );
 }
 
-export default Banco;
+export default Category;

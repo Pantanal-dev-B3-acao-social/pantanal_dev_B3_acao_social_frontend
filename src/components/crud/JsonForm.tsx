@@ -17,6 +17,7 @@ const useStyles = makeStyles({
 
 export interface JsonFormProps {
   uischema: UISchemaElement;
+  schema: JsonSchema;
   data: any;
   onChange: (state: Pick<JsonFormsCore, "data" | "errors">) => void;
   readonly: boolean;
@@ -25,25 +26,25 @@ export interface JsonFormProps {
 
 const JsonForm = ({
   uischema,
+  schema,
   data,
   onChange,
   readonly,
   api,
 }: JsonFormProps) => {
   const classes = useStyles();
-  const [schema, setSchema] = useState<JsonSchema>({});
+  // const [schema, setSchema] = useState<JsonSchema>({});
 
-  useEffect(() => {
-    // api?.getSchema?.().then((schema) => {
-    //   setSchema(schema);
-    // });
-  }, [api]);
+  // useEffect(() => {
+  //   api?.getSchema?.().then((schema) => {
+  //     setSchema(schema);
+  //   });
+  // }, [api]);
 
   return (
     <Fragment>
       <div className={classes.demoform}>
         <JsonForms
-          // schema={schema}
           schema={schema}
           uischema={uischema}
           data={data}
