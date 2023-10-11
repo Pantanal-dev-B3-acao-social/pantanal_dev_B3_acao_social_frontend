@@ -23,7 +23,10 @@ function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link to="/usuario">Usuário</Link>
           </li>
-           <li>
+          <li>
+            <Link to="/pessoa">Pessoas</Link>
+          </li>
+          <li>
             <Link to="/empresa">Empresa</Link>
           </li>
           <li>

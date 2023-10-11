@@ -5,6 +5,7 @@ import NotFound from "./components/layout/NotFound";
 import UserLayout from "./components/UserLayout";
 import CategoryGroupLayout from "./components/CategoryGroupLayout";
 import CompanyLayout from "./components/CompanyLayout";
+import PersonLayout from "./components/PersonLayout";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route index element={<Home />} />
                 <Route path="/usuario" element={<UserLayout />} />
                 <Route path="/empresa" element={<CompanyLayout />} />
+                <Route path="/pessoa" element={<PersonLayout />} />
                 <Route
                   path="/grupo-categoria"
                   element={<CategoryGroupLayout />}
