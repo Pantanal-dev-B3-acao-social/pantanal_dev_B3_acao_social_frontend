@@ -1,5 +1,5 @@
-import { JsonSchema } from "@jsonforms/core";
-import { client } from "../config/axios-config";
+// import { JsonSchema } from "@jsonforms/core";
+import { clientWithAuth } from "../config/axios-config";
 
 export interface FormApi {
   // getSchema: () => Promise<JsonSchema>;
@@ -14,32 +14,34 @@ export class GenericApi implements FormApi {
   constructor(private readonly url: string) {}
 
   // async getSchema(): Promise<JsonSchema> {
-  //   const response = await client.get<JsonSchema>(`${this.url}/schema`);
+  //   const response = await clientWithAuth.get<JsonSchema>(`${this.url}/schema`);
   //   return response.data;
   // }
 
   async get(id: number): Promise<any> {
-    const response = await client.get<any>(`${this.url}/${id}`);
+    const response = await clientWithAuth.get<any>(`${this.url}/${id}`);
     return response.data;
   }
 
   async getAll(): Promise<any> {
-    const response = await client.get<any>(`${this.url}`);
+    console.log("getAll clientWithAuth");
+    console.log(clientWithAuth);
+    const response = await clientWithAuth.get<any>(`${this.url}`);
     return response?.data?.data;
   }
 
   async put(id: number, data: any): Promise<any> {
-    const response = await client.put<any>(`${this.url}/${id}`, data);
+    const response = await clientWithAuth.put<any>(`${this.url}/${id}`, data);
     return response;
   }
 
   async post(data: any): Promise<any> {
-    const response = await client.post<any>(`${this.url}`, data);
+    const response = await clientWithAuth.post<any>(`${this.url}`, data);
     return response;
   }
 
   async delete(id: number): Promise<any> {
-    const response = await client.delete<any>(`${this.url}/${id}`);
+    const response = await clientWithAuth.delete<any>(`${this.url}/${id}`);
     return response;
   }
 }

@@ -2,6 +2,9 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 export const getAuthUserLogged: any = (): any => {
   try {
+    console.log("getAuthUserLogged localStorage.getItem('authUserLogged')");
+    console.log(localStorage.getItem("authUserLogged"));
+
     const authUserLogged: any = JSON.parse(
       localStorage.getItem("authUserLogged") || "{}"
     );
@@ -9,6 +12,8 @@ export const getAuthUserLogged: any = (): any => {
     if (authUserLogged && authUserLogged.authenticationToken) {
       jwtUser = authUserLogged.authenticationToken;
     }
+    console.log("jwtUser:::");
+    console.log(jwtUser);
     return jwtUser;
   } catch (error: any) {
     if (error.response && error.response.status === 401) {
@@ -17,7 +22,26 @@ export const getAuthUserLogged: any = (): any => {
   }
 };
 
-const getConfigAxios: any = (): any => {
+const getConfigAxiosWithAuth: any = (): any => {
+  const jwt: any = getAuthUserLogged();
+  console.log("getConfigAxiosWithAuth jwtUser:::");
+  console.log(jwt);
+
+  const env: any = environmentVariables();
+  const baseUrlRequest = `${env.methodHttp}://${env.baseUrl}:${env.backendPort}/${env.versionApi}`;
+  const config: any = {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Authorization: `Bearer ${jwt}`,
+    },
+    params: {},
+    baseURL: baseUrlRequest,
+  };
+  return config;
+};
+
+const getConfigAxiosNoAuth: any = (): any => {
   const jwt: any = getAuthUserLogged();
   const env: any = environmentVariables();
   const baseUrlRequest = `${env.methodHttp}://${env.baseUrl}:${env.backendPort}/${env.versionApi}`;
@@ -29,14 +53,6 @@ const getConfigAxios: any = (): any => {
     params: {},
     baseURL: baseUrlRequest,
   };
-
-  if (jwt) {
-    config.headers = {
-      ...config.headers,
-      Authorization: `Bearer ${jwt}`,
-    };
-  }
-
   return config;
 };
 
@@ -52,15 +68,13 @@ export const environmentVariables: any = (): any => {
   return environment;
 };
 
-export const client: AxiosInstance = axios.create(getConfigAxios());
-
 export async function verifyTokenValid() {
   try {
     const authenticationToken = getAuthUserLogged();
     if (!authenticationToken) {
       return false;
     }
-    const instanceAxios: AxiosInstance = client;
+    const instanceAxios: AxiosInstance = clientWithAuth;
     const response: AxiosResponse<any, any> = await instanceAxios.get(
       `/user/tokenvalid`
     );
@@ -75,3 +89,8 @@ export async function verifyTokenValid() {
     return false;
   }
 }
+
+export const clientWithAuth: AxiosInstance = axios.create(
+  getConfigAxiosWithAuth()
+);
+export const clientNoAuth: AxiosInstance = axios.create(getConfigAxiosNoAuth());
