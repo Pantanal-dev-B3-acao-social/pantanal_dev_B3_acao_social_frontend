@@ -29,6 +29,9 @@ function Layout({ children }: { children: React.ReactNode }) {
           <li>
             <Link to="/categoria">Categoria</Link>
           </li>
+          <li>
+            <Link to="/section">Sessão</Link>
+          </li>
         </ul>
       </nav>
       <div>{children}</div>
