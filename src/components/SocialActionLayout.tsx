@@ -29,7 +29,7 @@ function SocialAction() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="SocialAction"
+      title="Ação Social"
       uischema={uischema}
       schema={SocialActionSchema}
       apiUrl={"/v1/socialAction"}

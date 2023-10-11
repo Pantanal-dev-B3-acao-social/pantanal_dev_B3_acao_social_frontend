@@ -30,7 +30,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/categoria">Categoria</Link>
           </li>
           <li>
-            <Link to="/socialAction">SocialAction</Link>
+            <Link to="/socialAction">Ação Social</Link>
           </li>
         </ul>
       </nav>
