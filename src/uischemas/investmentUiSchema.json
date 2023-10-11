@@ -1,0 +1,35 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Valor",
+      "scope": "#/properties/value"
+    },
+    {
+      "type": "Control",
+      "label": "Data",
+      "scope": "#/properties/date"
+    },
+    {
+      "type": "Control",
+      "label": "Motivação",
+      "scope": "#/properties/motivation"
+    },
+    {
+      "type": "Control",
+      "label": "Aprovado Por",
+      "scope": "#/properties/approvedBy"
+    },
+    {
+      "type": "Control",
+      "label": "Data de Aprovação",
+      "scope": "#/properties/approvedDate"
+    },
+    {
+      "type": "Control",
+      "label": "Empresa",
+      "scope": "#/properties/company"
+    }
+  ]
+}

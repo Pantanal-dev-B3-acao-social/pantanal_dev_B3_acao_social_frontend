@@ -24,6 +24,9 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/usuario">Usuário</Link>
           </li>
           <li>
+            <Link to="/investimento">Investimentos</Link>
+          </li>
+          <li>
             <Link to="/grupo-categoria">Grupo Categoria</Link>
           </li>
           <li>
