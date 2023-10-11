@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.min.css";
 import { useNavigate } from "react-router-dom";
-import { clientNoAuth } from "../../config/axios-config";
+import { clientNoAuth } from "../../config/axios-without-auth-config";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import "./login.css";
 

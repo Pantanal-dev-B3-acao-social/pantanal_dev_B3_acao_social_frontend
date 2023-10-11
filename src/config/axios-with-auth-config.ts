@@ -2,20 +2,36 @@ import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 export const getAuthUserLogged: any = (): any => {
   try {
+    const token = localStorage.getItem("authUserLogged");
+    let authUserLogged: any = {};
     console.log("getAuthUserLogged localStorage.getItem('authUserLogged')");
-    console.log(localStorage.getItem("authUserLogged"));
-
-    const authUserLogged: any = JSON.parse(
-      localStorage.getItem("authUserLogged") || "{}"
-    );
-    let jwtUser = "";
-    if (authUserLogged && authUserLogged.authenticationToken) {
-      jwtUser = authUserLogged.authenticationToken;
+    console.log(token);
+    console.log("00000");
+    if (token) {
+      console.log("token:::000");
+      // authUserLogged = JSON.parse(token);
+      authUserLogged = token;
+      console.log("authUserLogged:::", authUserLogged);
     }
+    console.log("authUserLogged::::", authUserLogged);
+    console.log("1");
+    if (!authUserLogged) {
+      console.log("2");
+      window.location.href = "/login";
+    }
+    console.log("3");
+    let jwtUser = "";
+    // if (authUserLogged && authUserLogged.authenticationToken) {
+    //   jwtUser = authUserLogged.authenticationToken;
+    // }
     console.log("jwtUser:::");
     console.log(jwtUser);
-    return jwtUser;
+
+    // return jwtUser;
+    return token;
   } catch (error: any) {
+    console.log("deu erro no axios with auth");
+    console.log(error);
     if (error.response && error.response.status === 401) {
       window.location.href = "/login";
     }
@@ -23,10 +39,10 @@ export const getAuthUserLogged: any = (): any => {
 };
 
 const getConfigAxiosWithAuth: any = (): any => {
+  console.log("getConfigAxiosWithAuth");
   const jwt: any = getAuthUserLogged();
   console.log("getConfigAxiosWithAuth jwtUser:::");
   console.log(jwt);
-
   const env: any = environmentVariables();
   const baseUrlRequest = `${env.methodHttp}://${env.baseUrl}:${env.backendPort}/${env.versionApi}`;
   const config: any = {
@@ -34,21 +50,6 @@ const getConfigAxiosWithAuth: any = (): any => {
       "Content-Type": "application/json",
       Accept: "application/json",
       Authorization: `Bearer ${jwt}`,
-    },
-    params: {},
-    baseURL: baseUrlRequest,
-  };
-  return config;
-};
-
-const getConfigAxiosNoAuth: any = (): any => {
-  const jwt: any = getAuthUserLogged();
-  const env: any = environmentVariables();
-  const baseUrlRequest = `${env.methodHttp}://${env.baseUrl}:${env.backendPort}/${env.versionApi}`;
-  const config: any = {
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
     },
     params: {},
     baseURL: baseUrlRequest,
@@ -89,8 +90,7 @@ export async function verifyTokenValid() {
     return false;
   }
 }
-
+console.log("axios-with-auth-config.ts");
 export const clientWithAuth: AxiosInstance = axios.create(
   getConfigAxiosWithAuth()
 );
-export const clientNoAuth: AxiosInstance = axios.create(getConfigAxiosNoAuth());

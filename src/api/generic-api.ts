@@ -1,5 +1,5 @@
 // import { JsonSchema } from "@jsonforms/core";
-import { clientWithAuth } from "../config/axios-config";
+import { clientWithAuth } from "../config/axios-with-auth-config";
 
 export interface FormApi {
   // getSchema: () => Promise<JsonSchema>;
