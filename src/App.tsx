@@ -4,11 +4,8 @@ import Layout from "./components/layout/Layout";
 import NotFound from "./components/layout/NotFound";
 import UserLayout from "./components/UserLayout";
 import CategoryGroupLayout from "./components/CategoryGroupLayout";
-<<<<<<< HEAD
 import CompanyLayout from "./components/CompanyLayout";
-=======
 import Login from "./components/login/Login";
->>>>>>> main
 
 const App = () => {
   return (
