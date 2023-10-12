@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import { useNavigate } from "react-router-dom";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import "./login.css";
-import { clientWithAuth } from "../../config/axios-with-auth-config";
+import { instanceAxios } from "../../config/axios-config";
 
 interface LoginForm {
   username: string;
@@ -31,8 +31,8 @@ const Login: FC = () => {
   const login: SubmitHandler<LoginForm> = async (data: LoginForm) => {
     setIsLoading(true);
     try {
-      console.log(clientWithAuth);
-      const response = await clientWithAuth.post<LoginResponse>(
+      
+      const response = await instanceAxios.post<LoginResponse>(
         "/auth/login",
         data
       );
