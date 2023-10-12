@@ -24,9 +24,9 @@ export const getAuthUserLogged: any = (): any => {
     // if (authUserLogged && authUserLogged.authenticationToken) {
     //   jwtUser = authUserLogged.authenticationToken;
     // }
-    console.log("jwtUser:::");
-    console.log(jwtUser);
-
+    // console.log("jwtUser:::");
+    // console.log(jwtUser);
+    console.log(token);
     // return jwtUser;
     return token;
   } catch (error: any) {
@@ -45,15 +45,19 @@ const getConfigAxiosWithAuth: any = (): any => {
   console.log(jwt);
   const env: any = environmentVariables();
   const baseUrlRequest = `${env.methodHttp}://${env.baseUrl}:${env.backendPort}/${env.versionApi}`;
-  const config: any = {
+
+  const config = {
     headers: {
+      // Authorization: `Bearer ${jwt}`,
       "Content-Type": "application/json",
       Accept: "application/json",
-      Authorization: `Bearer ${jwt}`,
+      "Access-Control-Allow-Origin": "*",
     },
     params: {},
     baseURL: baseUrlRequest,
   };
+  console.log(config);
+
   return config;
 };
 
@@ -69,28 +73,38 @@ export const environmentVariables: any = (): any => {
   return environment;
 };
 
-export async function verifyTokenValid() {
-  try {
-    const authenticationToken = getAuthUserLogged();
-    if (!authenticationToken) {
-      return false;
-    }
-    const instanceAxios: AxiosInstance = clientWithAuth;
-    const response: AxiosResponse<any, any> = await instanceAxios.get(
-      `/user/tokenvalid`
-    );
-    const tokenValid: any = response.data || false;
-    return tokenValid;
-  } catch (error: any) {
-    if (error.response && error.response.status === 401) {
-      console.log("Erro 401 - não autorizado");
-    } else {
-      console.log("Erro ao verificar token:", error.message);
-    }
-    return false;
-  }
-}
-console.log("axios-with-auth-config.ts");
+axios.defaults.headers.common[
+  "Authorization"
+] = `Bearer ${getAuthUserLogged()}`;
+
 export const clientWithAuth: AxiosInstance = axios.create(
   getConfigAxiosWithAuth()
 );
+
+clientWithAuth.interceptors.request.use(
+  (config) => {
+    // Aqui você pode definir o token de autorização, como um token JWT, por exemplo.
+    const token: any = getAuthUserLogged();
+    console.log("axios.interceptors.request", token);
+    // Certifique-se de que o token está disponível antes de adicionar ao cabeçalho
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`;
+      console.log(
+        "config.headers['Authorization']",
+        config.headers["Authorization"]
+      );
+    }
+    console.log("interceptors config");
+    console.log(config);
+    if (config.url === "/auth/login") {
+      delete config.headers["Authorization"];
+    }
+
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
+console.log("axios-with-auth-config.ts");

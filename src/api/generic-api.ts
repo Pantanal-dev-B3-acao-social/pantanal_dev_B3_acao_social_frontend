@@ -1,4 +1,5 @@
 // import { JsonSchema } from "@jsonforms/core";
+import { AxiosError, AxiosResponse } from "axios";
 import { clientWithAuth } from "../config/axios-with-auth-config";
 
 export interface FormApi {
@@ -26,8 +27,19 @@ export class GenericApi implements FormApi {
   async getAll(): Promise<any> {
     console.log("getAll clientWithAuth");
     console.log(clientWithAuth);
-    const response = await clientWithAuth.get<any>(`${this.url}`);
-    return response?.data?.data;
+    try {
+      const response: AxiosResponse<any, any> = await clientWithAuth.get<any>(
+        `${this.url}`
+      );
+      return response?.data?.data;
+    } catch (error: AxiosError | any) {
+      console.log("Erro na solicitação Axios:", error.message); // Mensagem de erro
+      console.log("Configuração da solicitação:", error.config); // Configuração da solicitação
+      console.log("Status da resposta:", error.response?.status); // Status da resposta, se disponível
+      console.log("Dados da resposta:", error.response?.data); // Dados da resposta, se disponível
+
+      console.log(error);
+    }
   }
 
   async put(id: number, data: any): Promise<any> {

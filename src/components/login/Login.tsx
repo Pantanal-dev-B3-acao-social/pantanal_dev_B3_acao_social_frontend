@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.min.css";
 import { useNavigate } from "react-router-dom";
-import { clientNoAuth } from "../../config/axios-without-auth-config";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import "./login.css";
+import { clientWithAuth } from "../../config/axios-with-auth-config";
 
 interface LoginForm {
   username: string;
@@ -31,7 +31,8 @@ const Login: FC = () => {
   const login: SubmitHandler<LoginForm> = async (data: LoginForm) => {
     setIsLoading(true);
     try {
-      const response = await clientNoAuth.post<LoginResponse>(
+      console.log(clientWithAuth);
+      const response = await clientWithAuth.post<LoginResponse>(
         "/auth/login",
         data
       );
