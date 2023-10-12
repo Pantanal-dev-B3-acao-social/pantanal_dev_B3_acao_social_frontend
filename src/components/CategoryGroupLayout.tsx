@@ -4,19 +4,12 @@ import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
-  id: number;
-  codigo: string;
   nome: string;
-  ativo: boolean;
+  description: string;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
-  // {
-  //   id: "id",
-  //   numeric: true,
-  //   disablePadding: false,
-  //   label: "ID",
-  // },
+  
   {
     id: "name",
     numeric: false,
@@ -38,7 +31,7 @@ function CategoryGroupLayout() {
       title="Category"
       uischema={uischema}
       schema={CategoryGroupSchema}
-      apiUrl={"/v1/category-group"}
+      apiUrl={"/category-group"}
     ></Crud>
   );
 }
