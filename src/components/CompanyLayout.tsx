@@ -40,7 +40,7 @@ function CompanyLayout() {
       title="Empresa"
       uischema={uischema}
       schema={companySchema}
-      apiUrl="/v1/empresa"
+      apiUrl="/company"
     />
   );
 }
