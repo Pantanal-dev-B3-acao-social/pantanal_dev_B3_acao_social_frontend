@@ -1,0 +1,43 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Pessoa",
+      "scope": "#/properties/person"
+    },
+    {
+      "type": "Control",
+      "label": "Observação",
+      "scope": "#/properties/observation"
+    },
+    {
+      "type": "Control",
+      "label": "Ação Social",
+      "scope": "#/properties/socialAction"
+    },
+    {
+      "type": "Control",
+      "label": "Aprovado Por",
+      "scope": "#/properties/approvedBy"
+    },
+    {
+      "type": "Control",
+      "label": "Data de Aprovação",
+      "scope": "#/properties/approvedDate",
+      "options": {
+        "format": "date-time"
+      }
+    },
+    {
+      "type": "Control",
+      "label": "Feedback Voluntário",
+      "scope": "#/properties/feedbackVoluntary"
+    },
+    {
+      "type": "Control",
+      "label": "Pontuação de Feedback",
+      "scope": "#/properties/feedbackScore"
+    }
+  ]
+}
