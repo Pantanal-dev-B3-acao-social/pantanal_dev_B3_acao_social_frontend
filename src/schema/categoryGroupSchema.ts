@@ -4,10 +4,10 @@ export const CategoryGroupSchema = {
     name: { type: "string" },
     description: { type: "string" },
     code: { type: "string" },
-    categoryGroup: {
-      type: "object",
-      properties: {},
-    },
+    // categoryGroup: {
+    //   type: "object",
+    //   properties: {},
+    // },
   },
-  required: ["name", "description", "code", "visibility", "categoryGroup"],
+  required: ["name", "description", "code"],
 };
