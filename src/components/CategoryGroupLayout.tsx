@@ -38,7 +38,7 @@ function CategoryGroupLayout() {
       title="Category"
       uischema={uischema}
       schema={CategoryGroupSchema}
-      apiUrl={"/v1/category-group"}
+      apiUrl={"/category-group"}
     ></Crud>
   );
 }

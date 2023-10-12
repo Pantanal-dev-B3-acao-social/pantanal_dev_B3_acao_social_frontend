@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.min.css";
 import { useNavigate } from "react-router-dom";
-import { client } from "../../config/axios-config";
 import { Flip, ToastContainer, toast } from "react-toastify";
 import "./login.css";
+import { clientWithAuth } from "../../config/axios-with-auth-config";
 
 interface LoginForm {
   username: string;
@@ -31,9 +31,11 @@ const Login: FC = () => {
   const login: SubmitHandler<LoginForm> = async (data: LoginForm) => {
     setIsLoading(true);
     try {
-      const response = await client.post<LoginResponse>("/auth/login", data);
-      console.log("response123");
-      console.log(response);
+      console.log(clientWithAuth);
+      const response = await clientWithAuth.post<LoginResponse>(
+        "/auth/login",
+        data
+      );
       if (response.status == 200) {
         toast.success(response.data.message, {
           position: "top-right",
@@ -45,9 +47,8 @@ const Login: FC = () => {
           progress: 0,
           toastId: "my_toast",
         });
-        console.log("CHEGOU AQUI 1");
         localStorage.setItem("authUserLogged", response.data.access_token!);
-        console.log("CHEGOU AQUI 1");
+        console.log("login localStorage.getItem('authUserLogged'");
         console.log(localStorage.getItem("authUserLogged"));
         setIsLoading(false);
         navigate("/");
