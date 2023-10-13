@@ -5,29 +5,38 @@ import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
   id: number;
-  nome: string;
+  username: string;
+  firstName: string;
+  lastName: string;
+  enable: boolean;
   email: string;
   cpf: string;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "id",
-    numeric: true,
-    disablePadding: false,
-    label: "ID",
-  },
-  {
-    id: "nome",
+    id: "firstName",
     numeric: false,
     disablePadding: false,
-    label: "Nome",
+    label: "First Name",
+  },
+  {
+    id: "lastName",
+    numeric: false,
+    disablePadding: false,
+    label: "Last Name",
+  },
+  {
+    id: "cpf",
+    numeric: false,
+    disablePadding: false,
+    label: "CPF",
   },
   {
     id: "email",
     numeric: false,
     disablePadding: false,
-    label: "email",
+    label: "e-mail",
   },
 ];
 
@@ -38,7 +47,7 @@ function UserLayout() {
       title="Usuário"
       uischema={uischema}
       schema={UserSchema}
-      apiUrl={"/usuario"}
+      apiUrl={"/user"}
     ></Crud>
   );
 }

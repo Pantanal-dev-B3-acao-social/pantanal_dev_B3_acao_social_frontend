@@ -1,11 +1,48 @@
 export const UserSchema = {
   type: "object",
   properties: {
-    name: {
+    username: {
       type: "string",
-      minLength: 3,
-      maxLength: 100,
-      customErrors: "",
+    },
+    enable: {
+      type: "boolean",
+    },
+    email: {
+      type: "string",
+    },
+    firstName: {
+      type: "string",
+    },
+    lastName: {
+      type: "string",
+    },
+    attributes: {
+      type: "object",
+      properties: {
+        cpf:{
+          type: "string",
+        },    
+      }
+    },
+    credentials: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: {
+          type: {
+            type: "string"
+          },
+          value: {
+            type: "string"
+          },
+          temporary: {
+            type: "boolean"
+          }
+        },
+      },
     },
   },
+  required: ["username", "enable", "email", "fistName", "lastName", "attributes", "credentials"],
+
 };
+
