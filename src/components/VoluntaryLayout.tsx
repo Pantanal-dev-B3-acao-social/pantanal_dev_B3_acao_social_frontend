@@ -55,7 +55,7 @@ function VoluntaryLayout() {
       title="Voluntários"
       uischema={uischema}
       schema={voluntarySchema}
-      apiUrl="/v1/voluntario" // Endpoint da API para voluntários
+      apiUrl="/voluntary" // Endpoint da API para voluntários
     />
   );
 }
