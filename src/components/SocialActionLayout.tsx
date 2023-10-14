@@ -32,7 +32,7 @@ function SocialAction() {
       title="Ação Social"
       uischema={uischema}
       schema={SocialActionSchema}
-      apiUrl={"/v1/socialAction"}
+      apiUrl={"/socialAction"}
     ></Crud>
   );
 }
