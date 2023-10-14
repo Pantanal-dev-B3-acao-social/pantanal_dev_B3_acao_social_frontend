@@ -47,7 +47,7 @@ function Section() {
       title="Sessão"
       uischema={uischema}
       schema={SectionSchema}
-      apiUrl={"/v1/session"}
+      apiUrl={"/session"}
     ></Crud>
   );
 }
