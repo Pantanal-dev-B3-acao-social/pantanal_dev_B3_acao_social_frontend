@@ -4,11 +4,9 @@ import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
-  id: number;
   codigo: string;
   nome: string;
   descricao: string;
-  ativo: boolean;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
@@ -36,7 +34,7 @@ function Category() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Categoria"
+      title="Category"
       uischema={uischema}
       schema={CategorySchema}
       apiUrl={"/category"}
