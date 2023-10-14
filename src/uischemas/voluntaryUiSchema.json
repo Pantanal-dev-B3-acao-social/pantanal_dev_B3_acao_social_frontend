@@ -6,11 +6,7 @@
       "label": "Pessoa",
       "scope": "#/properties/person"
     },
-    {
-      "type": "Control",
-      "label": "Observação",
-      "scope": "#/properties/observation"
-    },
+
     {
       "type": "Control",
       "label": "Ação Social",
@@ -28,16 +24,6 @@
       "options": {
         "format": "date-time"
       }
-    },
-    {
-      "type": "Control",
-      "label": "Feedback Voluntário",
-      "scope": "#/properties/feedbackVoluntary"
-    },
-    {
-      "type": "Control",
-      "label": "Pontuação de Feedback",
-      "scope": "#/properties/feedbackScore"
     }
   ]
 }

@@ -11,12 +11,6 @@ const headCells = [
     label: 'Pessoa',
   },
   {
-    id: 'observation',
-    numeric: false,
-    disablePadding: false,
-    label: 'Observação',
-  },
-  {
     id: 'socialAction',
     numeric: false,
     disablePadding: false,
@@ -33,18 +27,6 @@ const headCells = [
     numeric: false,
     disablePadding: false,
     label: 'Data de Aprovação',
-  },
-  {
-    id: 'feedbackVoluntary',
-    numeric: false,
-    disablePadding: false,
-    label: 'Feedback Voluntário',
-  },
-  {
-    id: 'feedbackScore',
-    numeric: true,
-    disablePadding: false,
-    label: 'Pontuação de Feedback',
   },
 ];
 
