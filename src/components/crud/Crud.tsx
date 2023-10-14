@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
-import DataTable from "./DataTable";
+import DataTable   from "./DataTable";
 import JsonForm from "./JsonForm";
 import "./crud.css";
 import { HeadCell } from "./headCell";
@@ -75,13 +75,15 @@ export function Crud<T extends Record<string, any>>({
   }
 
   async function destroy() {
-    const response = await api?.delete?.(id);
-    if (response.status === 200) {
-      setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
-      setList(true);
-      handleCloseDelete();
-    }
+  const response = await api?.delete?.(id);
+  console.log('Response from API:', response);
+  if (response.status === 200) {
+    setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
+    setList(true);
+    handleCloseDelete();
   }
+}
+
 
   function back() {
     setList(true);
@@ -114,9 +116,10 @@ export function Crud<T extends Record<string, any>>({
   }
 
   const handleOpenDelete = (id: number) => {
-    setId(id);
-    setOpen(true);
-  };
+  const fileName = (apiListData as any)?.find((i: any) => i?.id === id)?.name;
+  setId(id);
+  setOpen(true);
+};
 
   const handleCloseDelete = () => {
     setOpen(false);
@@ -181,8 +184,7 @@ export function Crud<T extends Record<string, any>>({
         <DialogTitle>{"Deseja realmente apagar este item?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            ID: {id} <br />
-            Nome: {(apiListData as any)?.find((i: any) => i?.id === id)?.nome}
+            Nome: {(apiListData as any)?.find((i: any) => i?.id === id)?.name}
           </DialogContentText>
         </DialogContent>
         <DialogActions className="dialog-actions">
