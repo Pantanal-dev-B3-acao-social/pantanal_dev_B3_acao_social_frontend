@@ -34,30 +34,19 @@
     {
       "type": "Group",
       "label": "Credentials",
-      "elements": [
-        {
-          "type": "Array",
-          "scope": "#/properties/credentials",
-          "options": {
-            "itemCell": {
-              "type": "HorizontalLayout",
-              "elements": [
-                {
-                  "type": "Control",
-                  "scope": "#/properties/credentials/items/properties/type"
-                },
-                {
-                  "type": "Control",
-                  "scope": "#/properties/credentials/items/properties/value"
-                },
-                {
-                  "type": "Control",
-                  "scope": "#/properties/credentials/items/properties/temporary"
-                }
-              ]
-            }
+      "elements": [                 
+          {
+            "type": "Control",
+            "scope": "#/properties/credentials/properties/type"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/credentials/properties/value"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/credentials/properties/temporary"
           }
-        }
       ]
     }
   ]

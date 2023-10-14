@@ -15,28 +15,22 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "firstName",
+    id:"username",
     numeric: false,
     disablePadding: false,
-    label: "First Name",
-  },
-  {
-    id: "lastName",
-    numeric: false,
-    disablePadding: false,
-    label: "Last Name",
-  },
-  {
-    id: "cpf",
-    numeric: false,
-    disablePadding: false,
-    label: "CPF",
+    label: "Username",
   },
   {
     id: "email",
     numeric: false,
     disablePadding: false,
     label: "e-mail",
+  },
+  {
+    id: "cpf",
+    numeric: false,
+    disablePadding: false,
+    label: "CPF",
   },
 ];
 

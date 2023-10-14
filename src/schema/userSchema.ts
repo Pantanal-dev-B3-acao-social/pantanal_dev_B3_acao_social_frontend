@@ -25,10 +25,8 @@ export const UserSchema = {
       }
     },
     credentials: {
-      type: "array",
-      items: {
-        type: "object",
-        properties: {
+      type: "object",
+      properties: {
           type: {
             type: "string"
           },
@@ -37,8 +35,7 @@ export const UserSchema = {
           },
           temporary: {
             type: "boolean"
-          }
-        },
+          },
       },
     },
   },
