@@ -37,7 +37,7 @@ function OngLayout() {
       title="Ong"
       uischema={uischema}
       schema={OngSchema}
-      apiUrl={"/v1/ong"}
+      apiUrl={"/ong"}
     ></Crud>
   );
 }
