@@ -45,7 +45,7 @@ function InvestmentLayout() {
       title="Investimentos"
       uischema={uischema}
       schema={investmentSchema}
-      apiUrl="/v1/investimento"  // Endpoint da API para empresas
+      apiUrl="/investment"  // Endpoint da API para empresas
     />
   );
 }
