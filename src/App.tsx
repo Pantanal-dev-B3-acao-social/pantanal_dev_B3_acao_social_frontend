@@ -25,6 +25,7 @@ const App = () => {
                   path="/grupo-categoria"
                   element={<CategoryGroupLayout />}
                 />
+                <Route path="/ong" element={<OngLayout />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
