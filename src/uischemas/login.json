@@ -1,0 +1,43 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Group",
+      "label": "Login",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/username",
+          "options": {
+            "render":{
+              "type": "Text"
+            }
+          }
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/password",
+           "options": {
+            "render":{
+              "type": "Text"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Validation Errors",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/username/customErros"
+        },
+        {
+          "type": "Control",
+          "scope": "#/properties/password/customErros"
+        }
+      ]
+    }
+  ]
+}
