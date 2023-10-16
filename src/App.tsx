@@ -6,6 +6,7 @@ import UserLayout from "./components/UserLayout";
 import CategoryGroupLayout from "./components/CategoryGroupLayout";
 import CompanyLayout from "./components/CompanyLayout";
 import PersonLayout from "./components/PersonLayout";
+import Login from "./components/login/Login";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Layout>
               <Routes>
                 <Route index element={<Home />} />
+                <Route path="/login" element={<Login />}/>
                 <Route path="/usuario" element={<UserLayout />} />
                 <Route path="/empresa" element={<CompanyLayout />} />
                 <Route path="/pessoa" element={<PersonLayout />} />

@@ -32,7 +32,7 @@ function PersonLayout() {
       title="Pessoa"
       uischema={uischema}
       schema={personSchema}
-      apiUrl="/v1/pessoa"  // Endpoint da API para pessoas
+      apiUrl="/person"  // Endpoint da API para pessoas
     />
   );
 }
