@@ -5,13 +5,13 @@ import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
   codigo: string;
-  nome: string;
+  name: string;
   descricao: string;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "nome",
+    id: "name",
     numeric: false,
     disablePadding: false,
     label: "Nome",
