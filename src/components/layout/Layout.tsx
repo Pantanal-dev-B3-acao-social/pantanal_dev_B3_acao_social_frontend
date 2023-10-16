@@ -24,10 +24,16 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/usuario">Usuário</Link>
           </li>
           <li>
+            <Link to="/empresa">Empresa</Link>
+          </li>
+          <li>
             <Link to="/grupo-categoria">Grupo Categoria</Link>
           </li>
           <li>
             <Link to="/categoria">Categoria</Link>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
           </li>
           <li>
             <Link to="/section">Sessão</Link>
