@@ -12,13 +12,13 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "nome",
+    id: "name",
     numeric: false,
     disablePadding: false,
     label: "Nome",
   },
   {
-    id: "descricao",
+    id: "description",
     numeric: false,
     disablePadding: false,
     label: "Descrição",
