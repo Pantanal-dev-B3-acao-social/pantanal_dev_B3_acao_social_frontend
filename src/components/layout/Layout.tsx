@@ -21,6 +21,9 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/voluntario">Voluntários</Link>
+          </li>
+          <li>
             <Link to="/usuario">Usuário</Link>
           </li>
           <li>
@@ -30,10 +33,18 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/empresa">Empresa</Link>
           </li>
           <li>
+            <Link to="/investimento">Investimentos</Link>
+          </li>
+          <li>
             <Link to="/grupo-categoria">Grupo Categoria</Link>
           </li>
           <li>
             <Link to="/categoria">Categoria</Link>
+          </li>
+          <li>
+            <Link to="/ong">Ong</Link> <Link to="/login">Login</Link>
+            <Link to="/socialAction">Ação Social</Link>
+            <Link to="/section">Sessão</Link>
           </li>
           <li>
             <Link to="/login">Login</Link>
