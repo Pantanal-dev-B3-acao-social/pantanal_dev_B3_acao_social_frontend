@@ -1,0 +1,30 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Description",
+      "scope": "#/properties/description"
+    },
+    {
+      "type": "Control",
+      "label": "DateStartTime",
+      "scope": "#/properties/dateStartTime"
+    },
+    {
+      "type": "Control",
+      "label": "DateEndTime",
+      "scope": "#/properties/dateEndTime"
+    },
+    {
+      "type": "Control",
+      "label": "Status",
+      "scope": "#/properties/status"
+    },
+    {
+      "type": "Control",
+      "label": "Visibility",
+      "scope": "#/properties/visibility"
+    }
+  ]
+}
