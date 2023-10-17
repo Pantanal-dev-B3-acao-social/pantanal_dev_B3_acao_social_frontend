@@ -38,7 +38,7 @@ function UserLayout() {
       title="Usuário"
       uischema={uischema}
       schema={UserSchema}
-      apiUrl={"/usuario"}
+      apiUrl={"/user"}
     ></Crud>
   );
 }
