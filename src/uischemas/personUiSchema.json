@@ -1,0 +1,20 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Nome",
+      "scope": "#/properties/name"
+    },
+    {
+      "type": "Control",
+      "label": "Data de Nascimento",
+      "scope": "#/properties/dateBirth"
+    },
+    {
+      "type": "Control",
+      "label": "CPF",
+      "scope": "#/properties/cpf"
+    }
+  ]
+}

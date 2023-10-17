@@ -6,7 +6,7 @@ export interface FormApi {
   // getSchema: () => Promise<JsonSchema>;
   get: (id: number) => Promise<any>;
   getAll: () => Promise<any>;
-  put: (id: number, data: any) => Promise<any>;
+  patch: (id: number, data: any) => Promise<any>;
   post: (data: any) => Promise<any>;
   delete: (id: number) => Promise<any>;
 }
@@ -39,8 +39,8 @@ export class GenericApi implements FormApi {
     }
   }
 
-  async put(id: number, data: any): Promise<any> {
-    const response = await instanceAxios.put<any>(`${this.url}/${id}`, data);
+  async patch(id: number, data: any): Promise<any> {
+    const response = await instanceAxios.patch<any>(`${this.url}/${id}`, data);
     return response;
   }
 

@@ -1,0 +1,20 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Name",
+      "scope": "#/properties/name"
+    },
+    {
+      "type": "Control",
+      "label": "Code",
+      "scope": "#/properties/code"
+    },
+    {
+      "type": "Control",
+      "label": "Cnpj",
+      "scope": "#/properties/cnpj"
+    }
+  ]
+}
