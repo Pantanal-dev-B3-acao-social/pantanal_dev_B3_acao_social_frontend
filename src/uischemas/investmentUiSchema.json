@@ -8,8 +8,8 @@
     },
     {
       "type": "Control",
-      "label": "Data",
-      "scope": "#/properties/date"
+      "label": "Ação Social",
+      "scope": "#/properties/social_action"
     },
     {
       "type": "Control",

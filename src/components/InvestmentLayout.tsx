@@ -6,10 +6,17 @@ import { investmentSchema } from "../schema/investmentSchema";
 const headCells = [
   
   {
-    id: 'value',
+    id: 'valueMoney',
     numeric: false,
     disablePadding: false,
     label: 'Valor',
+  },
+
+  {
+    id: 'socialActionId',
+    numeric: false,
+    disablePadding: false,
+    label: 'Ação social',
   },
   
   {
@@ -31,7 +38,7 @@ const headCells = [
     label: 'Data de Aprovação',
   },
   {
-    id: 'company',
+    id: 'companyId',
     numeric: false,
     disablePadding: false,
     label: 'Empresa',
