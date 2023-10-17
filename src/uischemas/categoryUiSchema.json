@@ -20,11 +20,6 @@
       "type": "Control",
       "label": "Visibility",
       "scope": "#/properties/visibility"
-    },
-    {
-      "type": "Control",
-      "label": "Category Group",
-      "scope": "#/properties/categoryGroup"
     }
   ]
 }

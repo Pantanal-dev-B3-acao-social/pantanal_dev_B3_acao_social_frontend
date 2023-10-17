@@ -4,24 +4,23 @@ import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
-  id: number;
   codigo: string;
-  nome: string;
-  ativo: boolean;
+  name: string;
+  descricao: string;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "id",
-    numeric: true,
-    disablePadding: false,
-    label: "ID",
-  },
-  {
-    id: "nome",
+    id: "name",
     numeric: false,
     disablePadding: false,
     label: "Nome",
+  },
+  {
+    id: "descricao",
+    numeric: false,
+    disablePadding: false,
+    label: "Descrição",
   },
   {
     id: "codigo",

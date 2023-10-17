@@ -4,6 +4,7 @@ import Layout from "./components/layout/Layout";
 import NotFound from "./components/layout/NotFound";
 import UserLayout from "./components/UserLayout";
 import CategoryGroupLayout from "./components/CategoryGroupLayout";
+import CategoryLayout from "./components/CategoryLayout";
 import VoluntaryLayout from "./components/VoluntaryLayout";
 import InvestmentLayout from "./components/InvestmentLayout";
 
@@ -34,6 +35,7 @@ const App = () => {
                   path="/grupo-categoria"
                   element={<CategoryGroupLayout />}
                 />
+                <Route path="/categoria" element={<CategoryLayout />} />
                 <Route path="/ong" element={<OngLayout />} />
                 <Route path="/SocialAction" element={<SocialActionLayout />} />
                 <Route path="/section" element={<SectionLayout />} />
