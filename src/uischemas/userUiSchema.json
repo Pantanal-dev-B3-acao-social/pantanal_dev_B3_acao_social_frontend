@@ -3,11 +3,11 @@
   "elements": [
     {
       "type": "Control",
-      "scope": "#/properties/id"
+      "scope": "#/properties/username"
     },
     {
       "type": "Control",
-      "scope": "#/properties/nome"
+      "scope": "#/properties/enable"
     },
     {
       "type": "Control",
@@ -15,7 +15,39 @@
     },
     {
       "type": "Control",
-      "scope": "#/properties/cpf"
+      "scope": "#/properties/firstName"
+    },
+    {
+      "type": "Control",
+      "scope": "#/properties/lastName"
+    },
+    {
+      "type": "Group",
+      "label": "Attributes",
+      "elements": [
+        {
+          "type": "Control",
+          "scope": "#/properties/attributes/properties/cpf"
+        }
+      ]
+    },
+    {
+      "type": "Group",
+      "label": "Credentials",
+      "elements": [                 
+          {
+            "type": "Control",
+            "scope": "#/properties/credentials/properties/type"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/credentials/properties/value"
+          },
+          {
+            "type": "Control",
+            "scope": "#/properties/credentials/properties/temporary"
+          }
+      ]
     }
   ]
 }
