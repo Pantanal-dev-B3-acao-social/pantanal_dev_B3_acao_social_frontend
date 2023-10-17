@@ -181,8 +181,7 @@ export function Crud<T extends Record<string, any>>({
         <DialogTitle>{"Deseja realmente apagar este item?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            ID: {id} <br />
-            Nome: {(apiListData as any)?.find((i: any) => i?.id === id)?.nome}
+            Nome: {(apiListData as any)?.find((i: any) => i?.id === id)?.name}
           </DialogContentText>
         </DialogContent>
         <DialogActions className="dialog-actions">

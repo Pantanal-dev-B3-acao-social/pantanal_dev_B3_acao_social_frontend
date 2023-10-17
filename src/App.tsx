@@ -4,6 +4,8 @@ import Layout from "./components/layout/Layout";
 import NotFound from "./components/layout/NotFound";
 import UserLayout from "./components/UserLayout";
 import CategoryGroupLayout from "./components/CategoryGroupLayout";
+import InvestmentLayout from "./components/InvestmentLayout";
+
 import CompanyLayout from "./components/CompanyLayout";
 import Login from "./components/login/Login";
 
@@ -19,6 +21,7 @@ const App = () => {
                 <Route index element={<Home />} />
                 <Route path="/login" element={<Login />}/>
                 <Route path="/usuario" element={<UserLayout />} />
+                <Route path="/investimento" element={<InvestmentLayout />} />
                 <Route path="/empresa" element={<CompanyLayout />} />
                 <Route
                   path="/grupo-categoria"
