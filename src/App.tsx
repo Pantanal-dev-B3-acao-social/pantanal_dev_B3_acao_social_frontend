@@ -9,6 +9,7 @@ import InvestmentLayout from "./components/InvestmentLayout";
 
 import CompanyLayout from "./components/CompanyLayout";
 import Login from "./components/login/Login";
+import OngLayout from "./components/OngLayout";
 import SocialActionLayout from "./components/SocialActionLayout";
 import SectionLayout from "./components/SectionLayout";
 
@@ -31,6 +32,7 @@ const App = () => {
                   path="/grupo-categoria"
                   element={<CategoryGroupLayout />}
                 />
+                <Route path="/ong" element={<OngLayout />} />
                 <Route path="/SocialAction" element={<SocialActionLayout />} />
                 <Route path="/section" element={<SectionLayout />} />
                 <Route path="*" element={<NotFound />} />
