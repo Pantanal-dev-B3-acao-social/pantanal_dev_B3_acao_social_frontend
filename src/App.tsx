@@ -8,6 +8,7 @@ import VoluntaryLayout from "./components/VoluntaryLayout";
 import InvestmentLayout from "./components/InvestmentLayout";
 
 import CompanyLayout from "./components/CompanyLayout";
+import PersonLayout from "./components/PersonLayout";
 import Login from "./components/login/Login";
 import OngLayout from "./components/OngLayout";
 import SocialActionLayout from "./components/SocialActionLayout";
@@ -28,6 +29,7 @@ const App = () => {
                 <Route path="/voluntario" element={<VoluntaryLayout />} />
                 <Route path="/investimento" element={<InvestmentLayout />} />
                 <Route path="/empresa" element={<CompanyLayout />} />
+                <Route path="/pessoa" element={<PersonLayout />} />
                 <Route
                   path="/grupo-categoria"
                   element={<CategoryGroupLayout />}
