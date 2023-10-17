@@ -1,46 +1,40 @@
-import uischema from "../uischemas/userUiSchema.json";
-import { UserSchema } from "../schema/userSchema";
+import { SocialActionSchema } from "../schema/socialActionSchema";
+import uischema from "../uischemas/socialActionUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
   id: number;
+  codigo: string;
   nome: string;
-  email: string;
-  cpf: string;
+  descricao: string;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "id",
-    numeric: true,
-    disablePadding: false,
-    label: "ID",
-  },
-  {
-    id: "nome",
+    id: "name",
     numeric: false,
     disablePadding: false,
     label: "Nome",
   },
   {
-    id: "email",
+    id: "description",
     numeric: false,
     disablePadding: false,
-    label: "email",
+    label: "Descrição",
   },
 ];
 
-function UserLayout() {
+function SocialAction() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Usuário"
+      title="Ação Social"
       uischema={uischema}
-      schema={UserSchema}
-      apiUrl={"/user"}
+      schema={SocialActionSchema}
+      apiUrl={"/social"}
     ></Crud>
   );
 }
 
-export default UserLayout;
+export default SocialAction;
