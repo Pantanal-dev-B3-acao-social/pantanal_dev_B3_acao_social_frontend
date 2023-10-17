@@ -67,7 +67,7 @@ export function Crud<T extends Record<string, any>>({
         setList(true);
       }
     } else if (edit) {
-      const response = await api?.put?.(id, formData);
+      const response = await api?.patch?.(id, formData);
       if (response.status === 200) {
         setList(true);
       }
