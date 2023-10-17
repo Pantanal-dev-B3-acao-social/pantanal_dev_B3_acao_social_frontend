@@ -8,6 +8,7 @@ import InvestmentLayout from "./components/InvestmentLayout";
 
 import CompanyLayout from "./components/CompanyLayout";
 import Login from "./components/login/Login";
+import SectionLayout from "./components/SectionLayout";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
             <Layout>
               <Routes>
                 <Route index element={<Home />} />
-                <Route path="/login" element={<Login />}/>
+                <Route path="/login" element={<Login />} />
                 <Route path="/usuario" element={<UserLayout />} />
                 <Route path="/investimento" element={<InvestmentLayout />} />
                 <Route path="/empresa" element={<CompanyLayout />} />
@@ -27,6 +28,7 @@ const App = () => {
                   path="/grupo-categoria"
                   element={<CategoryGroupLayout />}
                 />
+                <Route path="/section" element={<SectionLayout />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
