@@ -116,7 +116,6 @@ export function Crud<T extends Record<string, any>>({
   }
 
   const handleOpenDelete = (id: number) => {
-  const fileName = (apiListData as any)?.find((i: any) => i?.id === id)?.name;
   setId(id);
   setOpen(true);
 };
