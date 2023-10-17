@@ -42,8 +42,9 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/categoria">Categoria</Link>
           </li>
           <li>
-            <Link to="/ong">Ong</Link> <Link to="/login">Login</Link>
             <Link to="/socialAction">Ação Social</Link>
+          </li>
+          <li>
             <Link to="/section">Sessão</Link>
           </li>
           <li>
