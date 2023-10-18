@@ -4,12 +4,12 @@
     {
       "type": "Control",
       "label": "Valor",
-      "scope": "#/properties/value"
+      "scope": "#/properties/valueMoney"
     },
     {
       "type": "Control",
       "label": "Ação Social",
-      "scope": "#/properties/social_action"
+      "scope": "#/properties/socialActionId"
     },
     {
       "type": "Control",
@@ -29,7 +29,7 @@
     {
       "type": "Control",
       "label": "Empresa",
-      "scope": "#/properties/company"
+      "scope": "#/properties/companyId"
     }
   ]
 }
