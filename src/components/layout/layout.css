@@ -24,3 +24,8 @@
   color: #6D6D6D;
   border-bottom: 3px solid #EA0000;
 }
+
+.content {
+  width: 80%;
+  margin: auto;
+}
