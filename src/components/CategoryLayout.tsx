@@ -17,16 +17,10 @@ const headCells: readonly HeadCell<Data>[] = [
     label: "Nome",
   },
   {
-    id: "descricao",
+    id: "description",
     numeric: false,
     disablePadding: false,
     label: "Descrição",
-  },
-  {
-    id: "codigo",
-    numeric: false,
-    disablePadding: false,
-    label: "Código",
   },
 ];
 
@@ -34,7 +28,7 @@ function Category() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Category"
+      title="Categoria"
       uischema={uischema}
       schema={CategorySchema}
       apiUrl={"/category"}
