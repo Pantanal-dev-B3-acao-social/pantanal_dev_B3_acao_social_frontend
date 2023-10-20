@@ -1,5 +1,5 @@
 import { CategoryGroupSchema } from "../schema/categoryGroupSchema";
-import uischema from "../uischemas/categoryUiSchema.json";
+import uischema from "../uischemas/categoryGroupUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
@@ -9,7 +9,7 @@ interface Data extends Record<string, any> {
 }
 
 const headCells: readonly HeadCell<Data>[] = [
-  
+
   {
     id: "name",
     numeric: false,
@@ -21,6 +21,12 @@ const headCells: readonly HeadCell<Data>[] = [
     numeric: false,
     disablePadding: false,
     label: "Descrição",
+  },
+  {
+    id: "categoryGroup",
+    numeric: false,
+    disablePadding: false,
+    label: "Grupo",
   },
 ];
 
