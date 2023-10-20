@@ -1,10 +1,10 @@
-import uischema from "../uischemas/investmentUiSchema.json";
+import uischema from "../jsonForms/uischemas/investmentUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
-import { investmentSchema } from "../schema/investmentSchema";
+import { investmentSchema } from "../jsonForms/schema/investmentSchema";
 
 const headCells = [
-  
+
   {
     id: 'valueMoney',
     numeric: false,
@@ -18,7 +18,7 @@ const headCells = [
     disablePadding: false,
     label: 'Ação social',
   },
-  
+
   {
     id: 'motivation',
     numeric: false,

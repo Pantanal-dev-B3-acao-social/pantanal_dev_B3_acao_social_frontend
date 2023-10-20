@@ -1,5 +1,5 @@
 import { rankWith, schemaMatches } from "@jsonforms/core";
-import { withJsonFormsControlProps, withJsonFormsRendererProps } from "@jsonforms/react";
+import { withJsonFormsControlProps } from "@jsonforms/react";
 import isEmpty from "lodash/isEmpty";
 
 const isCategoryGroup = schemaMatches((schema) => {

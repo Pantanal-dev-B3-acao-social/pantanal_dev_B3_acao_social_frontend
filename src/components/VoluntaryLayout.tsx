@@ -1,5 +1,5 @@
-import uischema from "../uischemas/voluntaryUiSchema.json";
-import { voluntarySchema } from "../schema/voluntarySchema";
+import uischema from "../jsonForms/uischemas/voluntaryUiSchema.json";
+import { voluntarySchema } from "../jsonForms/schema/voluntarySchema";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 

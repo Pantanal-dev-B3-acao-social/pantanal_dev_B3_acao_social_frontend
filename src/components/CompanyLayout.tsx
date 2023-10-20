@@ -1,7 +1,7 @@
 
-import { companySchema } from '../schema/companySchema';
-import uischema from '../uischemas/companyUiSchema.json';  // Certifique-se de importar o arquivo correto
-  // Certifique-se de importar o esquema correto
+import { companySchema } from '../jsonForms/schema/companySchema';
+import uischema from '../jsonForms/uischemas/companyUiSchema.json';  // Certifique-se de importar o arquivo correto
+// Certifique-se de importar o esquema correto
 import { Crud } from './crud/Crud';
 import { HeadCell } from './crud/headCell';
 

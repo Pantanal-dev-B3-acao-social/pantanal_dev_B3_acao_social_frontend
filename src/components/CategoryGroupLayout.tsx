@@ -1,5 +1,5 @@
-import { CategoryGroupSchema } from "../schema/categoryGroupSchema";
-import uischema from "../uischemas/categoryGroupUiSchema.json";
+import { CategoryGroupSchema } from "../jsonForms/schema/categoryGroupSchema";
+import uischema from "../jsonForms/uischemas/categoryGroupUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 

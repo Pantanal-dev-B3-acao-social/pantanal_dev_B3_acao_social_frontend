@@ -7,7 +7,8 @@ import { JsonForms } from "@jsonforms/react";
 import { makeStyles } from "@mui/styles";
 import { Fragment, useEffect, useState } from "react";
 import { GenericApi } from "../../api/generic-api";
-import { categoryGroupRender } from "../../renderers/CategoryGroupRender";
+import { categoryGroupRender } from "../../jsonForms/renderers/CategoryGroupRender";
+import { customRenderes } from "../../jsonForms/renderers";
 
 const useStyles = makeStyles({
   demoform: {
@@ -49,7 +50,8 @@ const JsonForm = ({
           schema={schema}
           uischema={uischema}
           data={data}
-          renderers={[...materialRenderers, categoryGroupRender]}
+          // renderers={[...materialRenderers, categoryGroupRender]}
+          renderers={[...materialRenderers, ...customRenderes]}
           cells={materialCells}
           onChange={onChange}
           readonly={readonly}

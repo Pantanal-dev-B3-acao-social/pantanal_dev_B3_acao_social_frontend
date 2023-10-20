@@ -1,5 +1,5 @@
-import uischema from "../uischemas/ongUiSchema.json";
-import { OngSchema } from "../schema/ongSchema";
+import uischema from "../jsonForms/uischemas/ongUiSchema.json";
+import { OngSchema } from "../jsonForms/schema/ongSchema";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
