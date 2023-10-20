@@ -10,6 +10,11 @@
       "type": "Control",
       "label": "Cnpj",
       "scope": "#/properties/cnpj"
+    },
+    {
+      "type": "Control",
+      "label": "Status",
+      "scope": "#/properties/status"
     }
   ]
 }
