@@ -5,7 +5,6 @@ export const CategoryGroupSchema = {
     description: { type: "string" },
     categoryGroup: {
       format: "categoryGroupId",
-      // type: "string",
     },
   },
   required: ["name", "description", "categoryGroup"],

@@ -9,7 +9,6 @@ const isCategoryGroup = schemaMatches((schema) => {
 const categoryGroupTester = rankWith(5, isCategoryGroup);
 export const categoryGroupRender = {
   tester: categoryGroupTester,
-  // renderer: withJsonFormsRendererProps(() => {
   renderer: withJsonFormsControlProps(() => {
     return (
       <>
