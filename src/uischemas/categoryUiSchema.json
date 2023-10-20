@@ -13,11 +13,6 @@
     },
     {
       "type": "Control",
-      "label": "Code",
-      "scope": "#/properties/code"
-    },
-    {
-      "type": "Control",
       "label": "Visibility",
       "scope": "#/properties/visibility"
     }
