@@ -11,6 +11,12 @@ const headCells = [
     disablePadding: false,
     label: 'Valor',
   },
+  {
+    id: 'date',
+    numeric: false,
+    disablePadding: false,
+    label: 'Data',
+  },
 
   {
     id: 'socialActionId',

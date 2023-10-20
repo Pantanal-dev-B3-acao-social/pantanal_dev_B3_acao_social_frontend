@@ -75,6 +75,7 @@ export function Crud<T extends Record<string, any>>({
   }
 
   async function destroy() {
+  console.log(id);
   const response = await api?.delete?.(id);
   console.log('Response from API:', response);
   if (response.status === 200) {
@@ -113,6 +114,12 @@ export function Crud<T extends Record<string, any>>({
     setView(false);
     setEdit(true);
     setId(id);
+
+    // Obtenha os dados mais recentes da API para o item com o ID fornecido
+    api?.get?.(id).then((data: any) => {
+      setApiData(data); // Atualize apiData com os dados obtidos da API
+      setFormData(data); // Atualize formData com os dados obtidos da API
+    });
   }
 
   const handleOpenDelete = (id: number) => {

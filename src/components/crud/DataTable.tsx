@@ -211,7 +211,7 @@ interface HeadCell<T> {
 // };
 
 type DataTableProps<T> = {
-  rows: T[];
+  rows: T[];  
   headCells: readonly HeadCell<T>[];
   checkboxes?: boolean;
   title?: string;
@@ -282,7 +282,7 @@ export default function DataTable<T extends Record<string, any>>(props: DataTabl
   const isSelected = (name: string) => selected.indexOf(name) !== -1;
 
   // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
+  const emptyRows = 
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   const visibleRows = React.useMemo(

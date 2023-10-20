@@ -17,13 +17,13 @@ const headCells: readonly HeadCell<Data>[] = [
     label: "Nome",
   },
   {
-    id: "descricao",
+    id: "description",
     numeric: false,
     disablePadding: false,
     label: "Descrição",
   },
   {
-    id: "codigo",
+    id: "code",
     numeric: false,
     disablePadding: false,
     label: "Código",

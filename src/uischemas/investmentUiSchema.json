@@ -8,6 +8,11 @@
     },
     {
       "type": "Control",
+      "label": "Data",
+      "scope": "#/properties/date"
+    },
+    {
+      "type": "Control",
       "label": "Ação Social",
       "scope": "#/properties/socialActionId"
     },

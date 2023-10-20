@@ -1,12 +1,13 @@
 export const investmentSchema = {
   type: "object",
   properties: {
-    valueMoney: { type: "string" },
+    valueMoney: { type: "number" },
+    date: { type: "string" },
     socialActionId: {type: "string" },
     motivation: { type: "string" },
     approvedBy: { type: "string" },
     approvedDate: { type: "string" },
     companyId: {type: "string" },
   },
-required: ["value", "social_action", "motivation", "approvedBy", "approvedDate", "company"],
+required: ["valueMoney", "socialActionId", "motivation", "approvedBy", "approvedDate", "companyId"],
 };
