@@ -5,11 +5,12 @@ import { investmentSchema } from "../jsonForms/schema/investmentSchema";
 
 const headCells = [
 
+
   {
-    id: 'valueMoney',
+    id: 'companyId',
     numeric: false,
     disablePadding: false,
-    label: 'Valor',
+    label: 'Empresa',
   },
 
   {
@@ -17,6 +18,13 @@ const headCells = [
     numeric: false,
     disablePadding: false,
     label: 'Ação social',
+  },
+
+  {
+    id: 'valueMoney',
+    numeric: false,
+    disablePadding: false,
+    label: 'Valor',
   },
 
   {
@@ -37,12 +45,7 @@ const headCells = [
     disablePadding: false,
     label: 'Data de Aprovação',
   },
-  {
-    id: 'companyId',
-    numeric: false,
-    disablePadding: false,
-    label: 'Empresa',
-  },
+
 ];
 
 function InvestmentLayout() {

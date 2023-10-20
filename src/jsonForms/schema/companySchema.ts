@@ -3,9 +3,7 @@ export const companySchema = {
   properties: {
     name: { type: "string" },
     description: { type: "string" },
-    cnpj: {type: "string" },
-    code: { type: "string" },
-    
+    cnpj: { type: "string" },
   },
-  required: ["name, description, cnpj, code"],
+  required: ["name, description, cnpj"],
 };
