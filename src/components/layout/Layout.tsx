@@ -55,7 +55,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           </li>
         </ul>
       </nav>
-      <div>{children}</div>
+      <div className="content">{children}</div>
     </div>
   );
 }
