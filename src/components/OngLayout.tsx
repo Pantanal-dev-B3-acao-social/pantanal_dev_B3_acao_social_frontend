@@ -7,6 +7,7 @@ interface Data extends Record<string, any> {
   id: number;
   name: string;
   cnpj: string;
+  status: string;
 }
 
 const headCells: readonly HeadCell<Data>[] = [
@@ -21,6 +22,12 @@ const headCells: readonly HeadCell<Data>[] = [
     numeric: false,
     disablePadding: false,
     label: "Cnpj",
+  },
+  {
+    id: "status",
+    numeric: false,
+    disablePadding: false,
+    label: "Status",
   },
 ];
 
