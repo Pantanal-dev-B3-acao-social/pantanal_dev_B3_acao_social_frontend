@@ -8,11 +8,6 @@
     },
     {
       "type": "Control",
-      "label": "Code",
-      "scope": "#/properties/code"
-    },
-    {
-      "type": "Control",
       "label": "Cnpj",
       "scope": "#/properties/cnpj"
     }
