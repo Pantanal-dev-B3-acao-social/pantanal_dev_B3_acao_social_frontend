@@ -3,7 +3,6 @@ export const CategorySchema = {
   properties: {
     name: { type: "string" },
     description: { type: "string" },
-    code: { type: "string" },
     visibility: {
       type: "string",
       enum: ["PUBLIC", "PRIVATE"],
