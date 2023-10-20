@@ -34,7 +34,7 @@ function Category() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Category"
+      title="Categoria"
       uischema={uischema}
       schema={CategorySchema}
       apiUrl={"/category"}

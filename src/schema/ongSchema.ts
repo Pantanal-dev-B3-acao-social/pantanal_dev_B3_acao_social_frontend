@@ -3,7 +3,6 @@ export const OngSchema = {
   properties: {
     name: { type: "string" },
     cnpj: { type: "string" },
-    code: { type: "string" },
   },
   required: ["name", "code", "cnpj"],
 };

@@ -45,6 +45,9 @@ function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/socialAction">Ação Social</Link>
           </li>
           <li>
+            <Link to="/ong">Ong</Link>
+          </li>
+          <li>
             <Link to="/section">Sessão</Link>
           </li>
           <li>
