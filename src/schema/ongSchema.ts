@@ -3,7 +3,10 @@ export const OngSchema = {
   properties: {
     name: { type: "string" },
     cnpj: { type: "string" },
-    code: { type: "string" },
+    status: {
+      type: "string",
+      enum: ["DEFAULTER", "SUPPLIER", "SUSPENDED", "REGULAR"],
+    },
   },
   required: ["name", "code", "cnpj"],
 };
