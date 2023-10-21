@@ -60,29 +60,41 @@ export function Crud<T extends Record<string, any>>({
     }
   }, [api, view, edit, id]);
 
-  async function save() {
-    if (add) {
-      const response = await api?.post?.(formData);
-      if (response.status === 201) {
-        setList(true);
-      }
-    } else if (edit) {
-      const response = await api?.patch?.(id, formData);
-      if (response.status === 200) {
-        setList(true);
-      }
+ async function save() {
+  if (add) {
+    const response = await api?.post?.(formData);
+    if (response.status === 201) {
+      // Atualize apiListData com a lista atualizada após a adição bem-sucedida
+      const data = await api?.getAll?.();
+      setApiListData(data);
+      setList(true);
+    }
+  } else if (edit) {
+    const response = await api?.patch?.(id, formData);
+    if (response.status === 200) {
+      // Atualize apiData com os dados mais recentes após a edição bem-sucedida
+      const updatedData = await api?.get?.(id);
+      setApiData(updatedData);
+      // Atualize apiListData com a lista atualizada após a edição bem-sucedida
+      const data = await api?.getAll?.();
+      setApiListData(data);
+      setList(true);
+    }
+  }
+} 
+
+
+  async function destroy() {
+    const response = await api?.delete?.(id);
+    console.log('Response from API:', response);
+    if (response.status === 200) {
+      // Atualize apiListData removendo o item excluído
+      setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
+      setList(true);
+      handleCloseDelete();
     }
   }
 
-  async function destroy() {
-  const response = await api?.delete?.(id);
-  console.log('Response from API:', response);
-  if (response.status === 200) {
-    setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
-    setList(true);
-    handleCloseDelete();
-  }
-}
 
 
   function back() {
@@ -189,7 +201,7 @@ export function Crud<T extends Record<string, any>>({
         <DialogActions className="dialog-actions">
           <Button className="btn-cancel-delete" onClick={handleCloseDelete}>
             Cancelar
-          </Button>
+          </Button> 
           <Button className="btn-confirm-delete" onClick={destroy}>
             Sim, tenho certeza
           </Button>
