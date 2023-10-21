@@ -74,7 +74,7 @@ export function Crud<T extends Record<string, any>>({
     if (response.status === 200) {
       // Atualize apiData com os dados mais recentes após a edição bem-sucedida
       const updatedData = await api?.get?.(id);
-      setApiData(updatedDat
+      setApiData(updatedData);
       // Atualize apiListData com a lista atualizada após a edição bem-sucedida
       const data = await api?.getAll?.();
       setApiListData(data);
