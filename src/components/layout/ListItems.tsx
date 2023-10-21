@@ -2,7 +2,9 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import Diversity1Icon from "@mui/icons-material/Diversity1";
 import PeopleIcon from "@mui/icons-material/People";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ListItemButton from "@mui/material/ListItemButton";
+import PaidIcon from "@mui/icons-material/Paid";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import SchoolIcon from "@mui/icons-material/School";
@@ -41,7 +43,7 @@ export const mainListItems = (
     <Link to="/investimento">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <PaidIcon />
         </ListItemIcon>
         <ListItemText primary="Investimento" />
       </ListItemButton>
@@ -50,7 +52,7 @@ export const mainListItems = (
     <Link to="/empresa">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <BusinessCenterIcon />
         </ListItemIcon>
         <ListItemText primary="Empresa" />
       </ListItemButton>
