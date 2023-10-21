@@ -14,11 +14,6 @@ export interface FormApi {
 export class GenericApi implements FormApi {
   constructor(private readonly url: string) {}
 
-  // async getSchema(): Promise<JsonSchema> {
-  //   const response = await instanceAxios.get<JsonSchema>(`${this.url}/schema`);
-  //   return response.data;
-  // }
-
   async get(id: number): Promise<any> {
     const response = await instanceAxios.get<any>(`${this.url}/${id}`);
     return response.data;

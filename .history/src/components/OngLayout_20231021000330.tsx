@@ -35,7 +35,7 @@ function OngLayout() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Organização não governamental"
+      title="Ong"
       uischema={uischema}
       schema={OngSchema}
       apiUrl={"/ong"}

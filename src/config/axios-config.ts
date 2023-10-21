@@ -28,7 +28,6 @@ export const getAuthUserLogged: any = (): any => {
 };
 
 const getConfigAxiosWithAuth: any = (): any => {
-
   const jwt: any = getAuthUserLogged();
   const env: any = environmentVariables();
   const baseUrlRequest = `${env.methodHttp}://${env.baseUrl}:${env.backendPort}/${env.versionApi}`;
@@ -86,4 +85,3 @@ instanceAxios.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-
