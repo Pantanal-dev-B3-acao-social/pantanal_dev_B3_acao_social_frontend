@@ -91,7 +91,7 @@ export function Crud<T extends Record<string, any>>({
   async function destroy() {
     try {
       const response = await api?.delete?.(id);
-      if (response.status === 200) {
+      if (response.status === 204) {
         setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
         setList(true);
         handleCloseDelete();
@@ -241,7 +241,7 @@ export function Crud<T extends Record<string, any>>({
           <>
             <b>ID:</b> &nbsp; {id}. <br />
             <b>Nome:</b> &nbsp;
-            {(apiListData as any)?.find((i: any) => i?.id === id)?.nome ||
+            {(apiListData as any)?.find((i: any) => i?.id === id)?.name ||
               "sem nome"}
             .
           </>
