@@ -74,7 +74,7 @@ export function Crud<T extends Record<string, any>>({
     if (response.status === 200) {
       // Atualize apiData com os dados mais recentes após a edição bem-sucedida
       const updatedData = await api?.get?.(id);
-      setApiData(updatedData);
+      setApiData(updatedDat
       // Atualize apiListData com a lista atualizada após a edição bem-sucedida
       const data = await api?.getAll?.();
       setApiListData(data);
@@ -87,7 +87,7 @@ export function Crud<T extends Record<string, any>>({
   async function destroy() {
     const response = await api?.delete?.(id);
     console.log('Response from API:', response);
-    if (response.status === 200) {
+    if (response.status === 204) {
       // Atualize apiListData removendo o item excluído
       setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
       setList(true);
@@ -134,7 +134,7 @@ export function Crud<T extends Record<string, any>>({
 
   const handleCloseDelete = () => {
     setOpen(false);
-    setTimeout(() => setId(-1), 100);
+    setId(-1);
   };
 
   return (
