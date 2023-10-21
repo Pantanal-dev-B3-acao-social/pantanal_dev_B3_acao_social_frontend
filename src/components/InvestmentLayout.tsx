@@ -1,51 +1,47 @@
-import uischema from "../jsonForms/uischemas/investmentUiSchema.json";
+import uischema from "../jsonforms/uischemas/investmentUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
-import { investmentSchema } from "../jsonForms/schema/investmentSchema";
+import { investmentSchema } from "../jsonforms/schema/investmentSchema";
 
 const headCells = [
-
-
   {
-    id: 'companyId',
+    id: "valueMoney",
     numeric: false,
     disablePadding: false,
-    label: 'Empresa',
+    label: "Valor",
   },
 
   {
-    id: 'socialActionId',
+    id: "socialActionId",
     numeric: false,
     disablePadding: false,
-    label: 'Ação social',
+    label: "Ação social",
   },
 
   {
-    id: 'valueMoney',
+    id: "motivation",
     numeric: false,
     disablePadding: false,
-    label: 'Valor',
-  },
-
-  {
-    id: 'motivation',
-    numeric: false,
-    disablePadding: false,
-    label: 'Motivação',
+    label: "Motivação",
   },
   {
-    id: 'approvedBy',
+    id: "approvedBy",
     numeric: false,
     disablePadding: false,
-    label: 'Aprovado Por',
+    label: "Aprovado Por",
   },
   {
-    id: 'approvedDate',
+    id: "approvedDate",
     numeric: false,
     disablePadding: false,
-    label: 'Data de Aprovação',
+    label: "Data de Aprovação",
   },
-
+  {
+    id: "companyId",
+    numeric: false,
+    disablePadding: false,
+    label: "Empresa",
+  },
 ];
 
 function InvestmentLayout() {
@@ -55,7 +51,7 @@ function InvestmentLayout() {
       title="Investimentos"
       uischema={uischema}
       schema={investmentSchema}
-      apiUrl="/investment"  // Endpoint da API para empresas
+      apiUrl="/investment" // Endpoint da API para empresas
     />
   );
 }

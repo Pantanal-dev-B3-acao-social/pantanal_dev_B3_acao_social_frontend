@@ -1,5 +1,5 @@
-import { SectionSchema } from "../jsonForms/schema/sectionSchema";
-import uischema from "../jsonForms/uischemas/sectionUiSchema.json";
+import { SectionSchema } from "../jsonforms/schema/sectionSchema";
+import uischema from "../jsonforms/uischemas/sectionUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 

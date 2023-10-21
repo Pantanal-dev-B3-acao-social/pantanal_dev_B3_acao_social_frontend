@@ -8,5 +8,5 @@ export const OngSchema = {
       enum: ["DEFAULTER", "SUPPLIER", "SUSPENDED", "REGULAR"],
     },
   },
-  required: ["name", "code", "cnpj"],
+  required: ["name", "cnpj"],
 };

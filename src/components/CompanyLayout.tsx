@@ -1,9 +1,8 @@
-
-import { companySchema } from '../jsonForms/schema/companySchema';
-import uischema from '../jsonForms/uischemas/companyUiSchema.json';  // Certifique-se de importar o arquivo correto
+import { companySchema } from "../jsonforms/schema/companySchema";
+import uischema from "../jsonforms/uischemas/companyUiSchema.json"; // Certifique-se de importar o arquivo correto
 // Certifique-se de importar o esquema correto
-import { Crud } from './crud/Crud';
-import { HeadCell } from './crud/headCell';
+import { Crud } from "./crud/Crud";
+import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
   id: number;
@@ -14,22 +13,22 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: 'name',
+    id: "name",
     numeric: false,
     disablePadding: false,
-    label: 'Nome',
+    label: "Nome",
   },
   {
-    id: 'description',
+    id: "description",
     numeric: false,
     disablePadding: false,
-    label: 'Descrição',
+    label: "Descrição",
   },
   {
-    id: 'cnpj',
+    id: "cnpj",
     numeric: false,
     disablePadding: false,
-    label: 'CNPJ',
+    label: "CNPJ",
   },
 ];
 

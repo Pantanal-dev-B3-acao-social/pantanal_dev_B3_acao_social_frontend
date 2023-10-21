@@ -10,7 +10,6 @@ const isCategoryGroup = schemaMatches((schema) => {
 
 const categoryGroupTester = rankWith(5, isCategoryGroup);
 export const categoryGroupRender = {
-
   tester: categoryGroupTester,
   renderer: withJsonFormsControlProps(() => {
     const [list, setList] = React.useState(true);
@@ -31,10 +30,11 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
+    console.log(apiListData);
     return (
       <>
         {apiListData && apiListData.length > 0 ? (
-          <select name="category" id="category">
+          <select name="group-category" id="group-category">
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>
                 {item.name}
@@ -48,8 +48,3 @@ export const categoryGroupRender = {
     );
   }),
 };
-
-
-// export function CategoryGroupComponentRender() {
-
-// }

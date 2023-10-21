@@ -1,5 +1,5 @@
-import { CategoryGroupSchema } from "../jsonForms/schema/categoryGroupSchema";
-import uischema from "../jsonForms/uischemas/categoryGroupUiSchema.json";
+import { CategoryGroupSchema } from "../jsonforms/schema/categoryGroupSchema";
+import uischema from "../jsonforms/uischemas/categoryGroupUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
@@ -9,7 +9,6 @@ interface Data extends Record<string, any> {
 }
 
 const headCells: readonly HeadCell<Data>[] = [
-
   {
     id: "name",
     numeric: false,
@@ -34,7 +33,7 @@ function CategoryGroupLayout() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Category"
+      title="Grupo de categoria"
       uischema={uischema}
       schema={CategoryGroupSchema}
       apiUrl={"/category-group"}

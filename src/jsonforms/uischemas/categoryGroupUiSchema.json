@@ -13,6 +13,11 @@
     },
     {
       "type": "Control",
+      "label": "Visibility",
+      "scope": "#/properties/visibility"
+    },
+    {
+      "type": "Control",
       "label": "Grupo",
       "scope": "#/properties/categoryGroup"
     }

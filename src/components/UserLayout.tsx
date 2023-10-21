@@ -1,5 +1,5 @@
-import uischema from "../jsonForms/uischemas/userUiSchema.json";
-import { UserSchema } from "../jsonForms/schema/userSchema";
+import uischema from "../jsonforms/uischemas/userUiSchema.json";
+import { UserSchema } from "../jsonforms/schema/userSchema";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 

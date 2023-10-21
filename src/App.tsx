@@ -3,17 +3,16 @@ import Home from "./components/Home";
 import Layout from "./components/layout/Layout";
 import NotFound from "./components/layout/NotFound";
 import UserLayout from "./components/UserLayout";
-import CategoryGroupLayout from "./components/CategoryGroupLayout";
-import CategoryLayout from "./components/CategoryLayout";
 import VoluntaryLayout from "./components/VoluntaryLayout";
 import InvestmentLayout from "./components/InvestmentLayout";
-
 import CompanyLayout from "./components/CompanyLayout";
 import PersonLayout from "./components/PersonLayout";
-import Login from "./components/login/Login";
+import CategoryGroupLayout from "./components/CategoryGroupLayout";
 import OngLayout from "./components/OngLayout";
+import CategoryLayout from "./components/CategoryLayout";
 import SocialActionLayout from "./components/SocialActionLayout";
 import SectionLayout from "./components/SectionLayout";
+import Login from "./components/login/Login";
 
 const App = () => {
   return (
