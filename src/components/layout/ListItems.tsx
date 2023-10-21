@@ -10,6 +10,10 @@ import ListItemText from "@mui/material/ListItemText";
 import SchoolIcon from "@mui/icons-material/School";
 import * as React from "react";
 import { Link } from "react-router-dom";
+import HandshakeIcon from '@mui/icons-material/Handshake';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 export const mainListItems = (
   <React.Fragment>
@@ -70,7 +74,7 @@ export const mainListItems = (
     <Link to="/grupo-categoria">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <ListAltIcon />
         </ListItemIcon>
         <ListItemText primary="Grupo de Categoria" />
       </ListItemButton>
@@ -79,7 +83,7 @@ export const mainListItems = (
     <Link to="/categoria">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <ListAltIcon />
         </ListItemIcon>
         <ListItemText primary="Categoria" />
       </ListItemButton>
@@ -88,7 +92,7 @@ export const mainListItems = (
     <Link to="/ong">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <HandshakeIcon />
         </ListItemIcon>
         <ListItemText primary="Ong" />
       </ListItemButton>
@@ -97,7 +101,7 @@ export const mainListItems = (
     <Link to="/SocialAction">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <VolunteerActivismIcon />
         </ListItemIcon>
         <ListItemText primary="SocialAction" />
       </ListItemButton>
@@ -105,7 +109,7 @@ export const mainListItems = (
     <Link to="/section">
       <ListItemButton>
         <ListItemIcon>
-          <PeopleIcon />
+          <AccessTimeIcon />
         </ListItemIcon>
         <ListItemText primary="Sessão" />
       </ListItemButton>
