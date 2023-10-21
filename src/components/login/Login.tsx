@@ -48,8 +48,6 @@ const Login: FC = () => {
           toastId: "my_toast",
         });
         localStorage.setItem("authUserLogged", response.data.access_token!);
-        console.log("login localStorage.getItem('authUserLogged'");
-        console.log(localStorage.getItem("authUserLogged"));
         setIsLoading(false);
         navigate("/");
       } else {
