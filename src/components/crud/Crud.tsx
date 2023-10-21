@@ -62,44 +62,6 @@ export function Crud<T extends Record<string, any>>({
     }
   }, [errors]);
 
-<<<<<<< HEAD
- async function save() {
-  if (add) {
-    const response = await api?.post?.(formData);
-    if (response.status === 201) {
-      // Atualize apiListData com a lista atualizada após a adição bem-sucedida
-      const data = await api?.getAll?.();
-      setApiListData(data);
-      setList(true);
-    }
-  } else if (edit) {
-    const response = await api?.patch?.(id, formData);
-    if (response.status === 200) {
-      // Atualize apiData com os dados mais recentes após a edição bem-sucedida
-      const updatedData = await api?.get?.(id);
-      setApiData(updatedData);
-      // Atualize apiListData com a lista atualizada após a edição bem-sucedida
-      const data = await api?.getAll?.();
-      setApiListData(data);
-      setList(true);
-    }
-  }
-} 
-
-
-  async function destroy() {
-    const response = await api?.delete?.(id);
-    console.log('Response from API:', response);
-    if (response.status === 204) {
-      // Atualize apiListData removendo o item excluído
-      setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
-      setList(true);
-      handleCloseDelete();
-    }
-  }
-
-
-=======
   async function save() {
     if (errors?.length) {
       setValidationMode("ValidateAndShow");
@@ -129,7 +91,7 @@ export function Crud<T extends Record<string, any>>({
   async function destroy() {
     try {
       const response = await api?.delete?.(id);
-      if (response.status === 200) {
+      if (response.status === 204 ) {
         setApiListData(apiListData?.filter((doc: any) => doc.id !== id));
         setList(true);
         handleCloseDelete();
@@ -140,7 +102,6 @@ export function Crud<T extends Record<string, any>>({
       showError("Ocorreu um erro.");
     }
   }
->>>>>>> 0550712450bb20c7c1ed29e10d154dc4e8bcff00
 
   function back() {
     setList(true);
@@ -185,13 +146,8 @@ export function Crud<T extends Record<string, any>>({
   };
 
   const handleCloseDelete = () => {
-<<<<<<< HEAD
-    setOpen(false);
-    setId(-1);
-=======
     setOpenDialog(false);
     setTimeout(() => setId(-1), 100);
->>>>>>> 0550712450bb20c7c1ed29e10d154dc4e8bcff00
   };
 
   const handleCloseAlert = (
@@ -278,29 +234,6 @@ export function Crud<T extends Record<string, any>>({
           </div>
         </>
       )}
-<<<<<<< HEAD
-      <Dialog
-        open={open}
-        keepMounted
-        onClose={handleCloseDelete}
-        aria-describedby="alert-dialog-slide-description"
-      >
-        <DialogTitle>{"Deseja realmente apagar este item?"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            Nome: {(apiListData as any)?.find((i: any) => i?.id === id)?.name}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions className="dialog-actions">
-          <Button className="btn-cancel-delete" onClick={handleCloseDelete}>
-            Cancelar
-          </Button> 
-          <Button className="btn-confirm-delete" onClick={destroy}>
-            Sim, tenho certeza
-          </Button>
-        </DialogActions>
-      </Dialog>
-=======
 
       <DeleteDialog
         openDialog={openDialog}
@@ -308,7 +241,7 @@ export function Crud<T extends Record<string, any>>({
           <>
             <b>ID:</b> &nbsp; {id}. <br />
             <b>Nome:</b> &nbsp;
-            {(apiListData as any)?.find((i: any) => i?.id === id)?.nome ||
+            {(apiListData as any)?.find((i: any) => i?.id === id)?.name ||
               "sem nome"}
             .
           </>
@@ -323,7 +256,6 @@ export function Crud<T extends Record<string, any>>({
         message={messageAlert}
         handleClose={handleCloseAlert}
       ></AlertCustom>
->>>>>>> 0550712450bb20c7c1ed29e10d154dc4e8bcff00
     </>
   );
 }
