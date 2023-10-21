@@ -1,32 +1,32 @@
-import uischema from "../uischemas/voluntaryUiSchema.json";
-import { voluntarySchema } from "../schema/voluntarySchema";
+import uischema from "../jsonforms/uischemas/voluntaryUiSchema.json";
+import { voluntarySchema } from "../jsonforms/schema/voluntarySchema";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 const headCells = [
   {
-    id: 'person',
+    id: "person",
     numeric: false,
     disablePadding: false,
-    label: 'Pessoa',
+    label: "Pessoa",
   },
   {
-    id: 'socialAction',
+    id: "socialAction",
     numeric: false,
     disablePadding: false,
-    label: 'Ação Social',
+    label: "Ação Social",
   },
   {
-    id: 'approvedBy',
+    id: "approvedBy",
     numeric: false,
     disablePadding: false,
-    label: 'Aprovado Por',
+    label: "Aprovado Por",
   },
   {
-    id: 'approvedDate',
+    id: "approvedDate",
     numeric: false,
     disablePadding: false,
-    label: 'Data de Aprovação',
+    label: "Data de Aprovação",
   },
 ];
 

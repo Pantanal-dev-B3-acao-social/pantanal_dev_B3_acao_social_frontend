@@ -1,27 +1,26 @@
-import uischema from "../uischemas/personUiSchema.json";
-import { personSchema } from "../schema/personSchema";
+import uischema from "../jsonforms/uischemas/personUiSchema.json";
+import { personSchema } from "../jsonforms/schema/personSchema";
 import { Crud } from "./crud/Crud";
-import { HeadCell } from './crud/headCell';
+import { HeadCell } from "./crud/headCell";
 
 const headCells = [
-
   {
-    id: 'name',
+    id: "name",
     numeric: false,
     disablePadding: false,
-    label: 'Nome',
+    label: "Nome",
   },
   {
-    id: 'dateBirth',
+    id: "dateBirth",
     numeric: false,
     disablePadding: false,
-    label: 'Data de Nascimento',
+    label: "Data de Nascimento",
   },
   {
-    id: 'cpf',
+    id: "cpf",
     numeric: false,
     disablePadding: false,
-    label: 'CPF',
+    label: "CPF",
   },
 ];
 
@@ -32,7 +31,7 @@ function PersonLayout() {
       title="Pessoa"
       uischema={uischema}
       schema={personSchema}
-      apiUrl="/person"  // Endpoint da API para pessoas
+      apiUrl="/person" // Endpoint da API para pessoas
     />
   );
 }

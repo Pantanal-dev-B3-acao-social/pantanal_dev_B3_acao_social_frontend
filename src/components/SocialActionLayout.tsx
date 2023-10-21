@@ -1,5 +1,5 @@
-import { SocialActionSchema } from "../schema/socialActionSchema";
-import uischema from "../uischemas/socialActionUiSchema.json";
+import { SocialActionSchema } from "../jsonforms/schema/socialActionSchema";
+import uischema from "../jsonforms/uischemas/socialActionUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 

@@ -1,5 +1,5 @@
-import uischema from "../uischemas/userUiSchema.json";
-import { UserSchema } from "../schema/userSchema";
+import uischema from "../jsonforms/uischemas/userUiSchema.json";
+import { UserSchema } from "../jsonforms/schema/userSchema";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
@@ -15,7 +15,7 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id:"username",
+    id: "username",
     numeric: false,
     disablePadding: false,
     label: "Username",

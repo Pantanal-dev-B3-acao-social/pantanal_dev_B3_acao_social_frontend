@@ -8,5 +8,5 @@ export const CategorySchema = {
       enum: ["PUBLIC", "PRIVATE"],
     },
   },
-  required: ["name", "description", "code", "visibility", "categoryGroup"],
+  required: ["name", "description", "visibility", "categoryGroup"],
 };

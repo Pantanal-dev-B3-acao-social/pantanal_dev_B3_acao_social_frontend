@@ -13,7 +13,6 @@ import { makeStyles } from "@mui/styles";
 import { Fragment, useEffect, useState } from "react";
 import { GenericApi } from "../../api/generic-api";
 import Loading from "./Loading";
-import { customRenderes } from "../../jsonforms/renderers";
 
 const useStyles = makeStyles({
   demoform: {
