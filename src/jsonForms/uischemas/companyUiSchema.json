@@ -1,25 +1,20 @@
 {
-  "type": "VerticalLayout",  
+  "type": "VerticalLayout",
   "elements": [
     {
       "type": "Control",
-      "label": "Nome",  
-      "scope": "#/properties/name"  
+      "label": "Nome",
+      "scope": "#/properties/name"
     },
     {
       "type": "Control",
-      "label": "Descrição",  
-      "scope": "#/properties/description"  
+      "label": "Descrição",
+      "scope": "#/properties/description"
     },
     {
       "type": "Control",
-      "label": "CNPJ",  
-      "scope": "#/properties/cnpj"  
-    },
-    {
-      "type": "Control",
-      "label": "Code",  
-      "scope": "#/properties/code"  
+      "label": "CNPJ",
+      "scope": "#/properties/cnpj"
     }
   ]
 }
