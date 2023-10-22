@@ -11,7 +11,15 @@ const isCategoryGroup = schemaMatches((schema) => {
 const categoryGroupTester = rankWith(5, isCategoryGroup);
 export const categoryGroupRender = {
   tester: categoryGroupTester,
-  renderer: withJsonFormsControlProps(() => {
+  renderer: withJsonFormsControlProps(({ handleChange }) => {
+    // const { handleChange } = props.handleChange;
+    // console.log(props);
+    console.log(handleChange);
+    const [selectedGroup, setSelectedGroup] = React.useState();
+    const handleChangeSelect = (event: any) => {
+      setSelectedGroup(event.target.value);
+    };
+
     const [list, setList] = React.useState(true);
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
@@ -30,11 +38,17 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
+    console.log(selectedGroup);
     console.log(apiListData);
     return (
       <>
         {apiListData && apiListData.length > 0 ? (
-          <select name="group-category" id="group-category">
+          <select
+            onChange={handleChangeSelect}
+            // onChange={handleChange}
+            name="group-category"
+            id="group-category"
+          >
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>
                 {item.name}
