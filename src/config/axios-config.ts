@@ -53,7 +53,7 @@ export const environmentVariables: any = (): any => {
     typeEnviroment: process.env.TYPE_ENVIROMENT || "DEVELOPMENT",
     methodHttp: process.env.BACKEND_METHOD_HTTP || "http",
     backendPort: process.env.BACKEND_PORT || "3001",
-    frontendPort: process.env.FRONTEND_PORT || "3000",
+    frontendPort: process.env.FRONTEND_PORT || "8080",
   };
   return environment;
 };
