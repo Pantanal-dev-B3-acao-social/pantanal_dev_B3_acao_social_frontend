@@ -48,7 +48,7 @@ const getConfigAxiosWithAuth: any = (): any => {
 
 export const environmentVariables: any = (): any => {
   const environment = {
-    baseUrl: process.env.BACKEND_BASE_URL || "localhost",
+    baseUrl: process.env.BACKEND_BASE_URL || "54.88.244.183", // TODO: localhost
     versionApi: process.env.BACKEND_API_VERSION || "v1",
     typeEnviroment: process.env.TYPE_ENVIROMENT || "DEVELOPMENT",
     methodHttp: process.env.BACKEND_METHOD_HTTP || "http",
