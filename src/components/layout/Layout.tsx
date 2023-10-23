@@ -15,6 +15,8 @@ import { ThemeProvider, createTheme, styled } from "@mui/material/styles";
 import * as React from "react";
 import { mainListItems } from "./ListItems";
 import "./layout.css";
+import LoginIcon from '@mui/icons-material/Login';
+import { Link } from 'react-router-dom';
 
 const drawerWidth: number = 240;
 
@@ -105,11 +107,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             >
               Pantanal.dev
             </Typography>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
+            {/* Botão de Login com redirecionamento para a tela de login */}
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <IconButton color="inherit">
+                <LoginIcon /> {/* Ícone de bloqueio */}
+              </IconButton>
+            </Link>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open} className="sidebar">

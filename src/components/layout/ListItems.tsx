@@ -35,15 +35,6 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/login">
-      <ListItemButton>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Entrar" />
-      </ListItemButton>
-    </Link>
-
     <Link to="/investimento">
       <ListItemButton>
         <ListItemIcon>
@@ -103,7 +94,7 @@ export const mainListItems = (
         <ListItemIcon>
           <VolunteerActivismIcon />
         </ListItemIcon>
-        <ListItemText primary="SocialAction" />
+        <ListItemText primary="Ação Social" />
       </ListItemButton>
     </Link>
     <Link to="/section">
