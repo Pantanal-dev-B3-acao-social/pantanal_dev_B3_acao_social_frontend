@@ -29,7 +29,6 @@
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "@types/lodash": "^4.14.200",
-    "@types/webpack-env": "^1.18.3",
     "react-scripts": "^5.0.1",
     "start-server-and-test": "^1.11.6"
   },
