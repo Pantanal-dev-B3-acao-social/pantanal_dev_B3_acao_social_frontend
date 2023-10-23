@@ -5,9 +5,9 @@ services:
     build:
       context: ./
       dockerfile: ./env/docker/Dockerfile
-    container_name: sig-react
+    container_name: frontend-react
     volumes:
       - .:/react
     ports:
-      - 8080:8080
+      - 3000:3000
     tty: true
