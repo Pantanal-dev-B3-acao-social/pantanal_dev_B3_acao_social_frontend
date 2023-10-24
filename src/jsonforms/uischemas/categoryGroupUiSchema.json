@@ -11,11 +11,7 @@
       "label": "Descrição",
       "scope": "#/properties/description"
     },
-    {
-      "type": "Control",
-      "label": "Visibility",
-      "scope": "#/properties/visibility"
-    },
+
     {
       "type": "Control",
       "label": "Grupo",
