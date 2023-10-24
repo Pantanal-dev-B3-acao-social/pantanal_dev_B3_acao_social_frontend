@@ -40,7 +40,12 @@ export class GenericApi implements FormApi {
   }
 
   async post(data: any): Promise<any> {
+    console.log("generic-api.js post1")
+    console.log(data);
+    console.log(JSON.stringify(data));
+    console.log("generic-api.js post 2 ")
     const response = await instanceAxios.post<any>(`${this.url}`, data);
+    console.log("generic-api.js post depois")
     return response;
   }
 
