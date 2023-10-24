@@ -12,7 +12,7 @@ export interface FormApi {
 }
 
 export class GenericApi implements FormApi {
-  constructor(private readonly url: string) {}
+  constructor(private readonly url: string) { }
 
   async get(id: number): Promise<any> {
     const response = await instanceAxios.get<any>(`${this.url}/${id}`);
