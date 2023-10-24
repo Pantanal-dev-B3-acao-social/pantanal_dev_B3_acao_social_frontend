@@ -74,12 +74,16 @@ export function Crud<T extends Record<string, any>>({
         if (response.status === 201) {
           back();
           showSuccess("Adicionado com sucesso.");
+        } else {
+          console.error(response);
         }
       } else if (edit) {
         const response = await api?.patch?.(id, formData);
         if (response.status === 200) {
           back();
           showSuccess("Editado com sucesso.");
+        } else {
+          console.error(response);
         }
       }
     } catch (error) {
