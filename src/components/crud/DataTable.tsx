@@ -22,6 +22,7 @@ import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material/styles";
 import { visuallyHidden } from "@mui/utils";
 import * as React from "react";
+import { getNestedValues } from "../../helpers/get-nested-values";
 import "./dataTable.css";
 
 function descendingComparator<T>(a: T, b: T, orderBy?: keyof T) {
@@ -406,7 +407,8 @@ export default function DataTable<T extends Record<string, any>>(
                           scope="row"
                           align="center"
                         >
-                          {row[String(cell.id)]}
+                          {/* {row[String(cell.id)]} */}
+                          {getNestedValues(row, cell.id)}
                         </TableCell>
                       );
                     })}
