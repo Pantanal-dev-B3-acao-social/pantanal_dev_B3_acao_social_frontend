@@ -19,7 +19,7 @@
     {
       "type": "Control",
       "label": "Grupo",
-      "scope": "#/properties/categoryGroupId"
+      "scope": "#/properties/categoryGroup"
     }
   ]
 }
