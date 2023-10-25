@@ -7,6 +7,12 @@ export const CategorySchema = {
       type: "string",
       enum: ["PUBLIC", "PRIVATE"],
     },
+    categoryGroupId: {
+      "format": "categoryGroupId",
+      "type": "string",
+      "nullable": false,
+      "foreignRoute": "category-group"
+    },
   },
-  required: ["name", "description", "visibility", "categoryGroup"],
+  required: ["name", "description", "visibility", "parentCategoryGroupEntity"],
 };
