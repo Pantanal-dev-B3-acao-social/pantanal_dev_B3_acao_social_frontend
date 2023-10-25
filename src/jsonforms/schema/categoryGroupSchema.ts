@@ -10,7 +10,7 @@ export const CategoryGroupSchema = {
     parentCategoryGroupId: {
       "format": "parentCategoryGroupId",
       "type": "string",
-      "nullable": false,
+      "nullable": true,
       "foreignRoute": "category-group"
     },
   },
