@@ -38,8 +38,9 @@ export const socialActionRender = {
             onChange={(event) => props.handleChange("socialAction", event.target.value)}
             name="social-action"
             id="social-action"
-            value={props.data}
+            value={props.data || 'Escolha'}
           >
+            <option value="">Selecione uma opção</option>
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>
                 {item.name}
