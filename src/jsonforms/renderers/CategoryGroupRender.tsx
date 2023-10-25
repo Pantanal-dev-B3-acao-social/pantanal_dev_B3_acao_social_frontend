@@ -8,23 +8,11 @@ const isCategoryGroup = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "categoryGroupId";
 });
 
-// const isCategoryGroup = schemaMatches(
-//   (schema) => !isEmpty(schema) && !isEmpty((schema as any)?.foreignRoute)
-// );
-
 const categoryGroupTester = rankWith(5, isCategoryGroup);
 
 export const categoryGroupRender = {
   tester: categoryGroupTester,
   renderer: withJsonFormsControlProps((props) => {
-    // const { handleChange } = props.handleChange;
-    // console.log(props);
-    // console.log(handleChange);
-    // const [selectedGroup, setSelectedGroup] = React.useState();
-    // const handleChangeSelect = (event: any) => {
-    //   setSelectedGroup(event.target.value);
-    // };
-
     const [list, setList] = React.useState(true);
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
@@ -43,8 +31,6 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
-    // console.log(selectedGroup);
-    // console.log(apiListData);
     return (
       <>
         {apiListData && apiListData.length > 0 ? (
@@ -52,6 +38,7 @@ export const categoryGroupRender = {
             onChange={(event) => props.handleChange("parentCategoryGroupEntity", event.target.value)}
             name="group-category"
             id="group-category"
+            value={props.data}
           >
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>

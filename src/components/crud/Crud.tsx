@@ -11,7 +11,6 @@ import DeleteDialog from "./DeleteDialog";
 import JsonForm from "./JsonForm";
 import "./crud.css";
 import { HeadCell } from "./headCell";
-import { serializeObject } from "../../helpers/objectDecomposition";
 
 export function Crud<T extends Record<string, any>>({
   headCells,
@@ -64,48 +63,29 @@ export function Crud<T extends Record<string, any>>({
   }, [errors]);
 
   async function save() {
-    // TODO:
-    console.log(errors)
+
     if (errors?.length) {
-      console.log("deu erro 1");
+      console.error(errors)
       setValidationMode("ValidateAndShow");
-      console.log("deu erro 4");
       return;
     }
 
     try {
-      console.log(add)
-      console.log(edit)
       if (add) {
-        console.log('chegou 222');
-        // formData?.groupCategory?.isDefaultPrevented?.prototype = undefined;
-        console.log(formData)
-        const propertiesToIgnore = ['isPropagationStopped']; // Especifique as propriedades a serem ignoradas
-        // const formDataClean = serializeObject(formData, propertiesToIgnore);
-        const formDataClean = formData;
-        console.log(formDataClean);
-        console.log(formData)
-
-        // JSON.stringify(formData);
-        console.log('chegou 333');
-        const response = await api?.post?.(formDataClean);
-        console.log(response)
+        console.log(formData);
+        const response = await api?.post?.(formData);
         if (response.status === 201) {
-          console.log("antes 1")
           back();
           showSuccess("Adicionado com sucesso.");
         } else {
-          console.log("DEU ERRO 2")
           console.error(response);
         }
       } else if (edit) {
-        console.log("antes 2")
         const response = await api?.patch?.(id, formData);
         if (response.status === 200) {
           back();
           showSuccess("Editado com sucesso.");
         } else {
-          console.log("DEU ERRO 3")
           console.error(response);
         }
       }
