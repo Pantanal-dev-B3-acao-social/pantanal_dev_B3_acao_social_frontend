@@ -105,5 +105,13 @@ export const mainListItems = (
         <ListItemText primary="Sessão" />
       </ListItemButton>
     </Link>
+    <Link to="/interest">
+      <ListItemButton>
+        <ListItemIcon>
+          <AccessTimeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Interesse" />
+      </ListItemButton>
+    </Link>
   </React.Fragment>
 );
