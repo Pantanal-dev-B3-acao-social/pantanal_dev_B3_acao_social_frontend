@@ -1,16 +1,16 @@
 import uischema from "../jsonforms/uischemas/investmentUiSchema.json";
 import { Crud } from "./crud/Crud";
-import { investmentSchema } from "../jsonforms/schema/investmentSchema";
+import { interestSchema } from "../jsonforms/schema/interestSchema";
 
 const headCells = [
   {
-    id: "person",
+    id: "personId",
     numeric: false,
     disablePadding: false,
     label: "Pessoa",
   },
   {
-    id: "category",
+    id: "categoryId",
     numeric: false,
     disablePadding: false,
     label: "Categoria",
@@ -23,7 +23,7 @@ function InterestLayout() {
       headCells={headCells}
       title="Interesse"
       uischema={uischema}
-      schema={investmentSchema}
+      schema={interestSchema}
       apiUrl="/interest" // Endpoint da API para empresas
     />
   );
