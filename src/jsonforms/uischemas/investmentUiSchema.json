@@ -8,11 +8,6 @@
     },
     {
       "type": "Control",
-      "label": "Ação Social",
-      "scope": "#/properties/socialActionId"
-    },
-    {
-      "type": "Control",
       "label": "Motivação",
       "scope": "#/properties/motivation"
     },
@@ -25,6 +20,11 @@
       "type": "Control",
       "label": "Data de Aprovação",
       "scope": "#/properties/approvedDate"
+    },
+    {
+      "type": "Control",
+      "label": "Ação Social",
+      "scope": "#/properties/socialActionId"
     },
     {
       "type": "Control",
