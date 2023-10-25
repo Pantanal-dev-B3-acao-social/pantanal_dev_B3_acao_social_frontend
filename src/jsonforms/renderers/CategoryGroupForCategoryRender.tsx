@@ -5,7 +5,7 @@ import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
 
 const isCategoryGroup = schemaMatches((schema) => {
-  return !isEmpty(schema) && schema.format === "categoryGroupId";
+  return !isEmpty(schema) && schema.format === "categoryGroupForCategoryId";
 });
 
 const categoryGroupTester = rankWith(5, isCategoryGroup);
@@ -35,7 +35,7 @@ export const categoryGroupRender = {
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            onChange={(event) => props.handleChange("parentCategoryGroupEntity", event.target.value)}
+            onChange={(event) => props.handleChange("categoryGroup", event.target.value)}
             name="group-category"
             id="group-category"
             value={props.data}

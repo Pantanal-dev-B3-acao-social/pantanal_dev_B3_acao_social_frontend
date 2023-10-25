@@ -45,12 +45,9 @@ const getConfigAxiosWithAuth: any = (): any => {
 
   return config;
 };
-// console.log(process);
-export const environmentVariables: any = (): any => {
-  // console.log(process);
-  // console.log(process.env.BACKEND_BASE_URL);
+export const environmentVariables: any = function environmentVariables(): any {
   const environment = {
-    baseUrl: process.env.BACKEND_BASE_URL || "54.237.115.172", // TODO: localhost
+    baseUrl: process.env.BACKEND_BASE_URL || "localhost", // TODO: localhost , 54.237.115.172
     versionApi: process.env.BACKEND_API_VERSION || "v1",
     typeEnviroment: process.env.TYPE_ENVIROMENT || "DEVELOPMENT",
     methodHttp: process.env.BACKEND_METHOD_HTTP || "http",

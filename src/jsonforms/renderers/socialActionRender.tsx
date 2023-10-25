@@ -4,19 +4,19 @@ import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
 
-const isCategoryGroup = schemaMatches((schema) => {
-  return !isEmpty(schema) && schema.format === "categoryGroupId";
+const isSocialAction = schemaMatches((schema) => {
+  return !isEmpty(schema) && schema.format === "socialActionId";
 });
 
-const categoryGroupTester = rankWith(5, isCategoryGroup);
+const socialActionTester = rankWith(5, isSocialAction);
 
-export const categoryGroupRender = {
-  tester: categoryGroupTester,
+export const socialActionRender = {
+  tester: socialActionTester,
   renderer: withJsonFormsControlProps((props) => {
     const [list, setList] = React.useState(true);
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
-    const apiUrl = "/category-group";
+    const apiUrl = "/social";
     React.useEffect(() => {
       if (apiUrl && !api) {
         const apiInstance = makeApi(apiUrl);
@@ -35,9 +35,9 @@ export const categoryGroupRender = {
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            onChange={(event) => props.handleChange("parentCategoryGroupEntity", event.target.value)}
-            name="group-category"
-            id="group-category"
+            onChange={(event) => props.handleChange("socialAction", event.target.value)}
+            name="social-action"
+            id="social-action"
             value={props.data}
           >
             {apiListData.map((item: any) => (
