@@ -81,8 +81,8 @@ export function Crud<T extends Record<string, any>>({
         // formData?.groupCategory?.isDefaultPrevented?.prototype = undefined;
         console.log(formData)
         const propertiesToIgnore = ['isPropagationStopped']; // Especifique as propriedades a serem ignoradas
-        const formDataClean = serializeObject(formData, propertiesToIgnore);
-        // const formDataClean = formData;
+        // const formDataClean = serializeObject(formData, propertiesToIgnore);
+        const formDataClean = formData;
         console.log(formDataClean);
         console.log(formData)
 

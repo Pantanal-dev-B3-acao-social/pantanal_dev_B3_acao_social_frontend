@@ -49,11 +49,7 @@ export const categoryGroupRender = {
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            // onChange={(value) => props.handleChange(props.path, value)}
-            /** parentCategoryGroupId */
-            onChange={(value) => props.handleChange("categoryGroup", value)}
-            // onChange={handleChangeSelect}
-            // onChange={handleChange}
+            onChange={(event) => props.handleChange("categoryGroup", event.target.value)}
             name="group-category"
             id="group-category"
           >
