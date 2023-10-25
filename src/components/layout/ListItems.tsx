@@ -44,14 +44,6 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/voluntario">
-      <ListItemButton>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Voluntario" />
-      </ListItemButton>
-    </Link>
 
     <Link to="/investimento">
       <ListItemButton>
