@@ -7,6 +7,12 @@ export const OngSchema = {
       type: "string",
       enum: ["DEFAULTER", "SUPPLIER", "SUSPENDED", "REGULAR"],
     },
+    socialActionId: {
+      "format": "socialActionId",
+      "type": "string",
+      "nullable": false,
+      "foreignRoute": "social"
+    },
   },
-  required: ["name", "cnpj"],
+  required: ["name", "cnpj", "socialActionId"],
 };
