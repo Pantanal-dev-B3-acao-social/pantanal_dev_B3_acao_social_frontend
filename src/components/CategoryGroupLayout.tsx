@@ -22,7 +22,7 @@ const headCells: readonly HeadCell<Data>[] = [
     label: "Descrição",
   },
   {
-    id: "categoryGroupId", // TODO: parentCategoryGroupId
+    id: "parentCategoryGroupId",
     numeric: false,
     disablePadding: false,
     label: "Grupo",

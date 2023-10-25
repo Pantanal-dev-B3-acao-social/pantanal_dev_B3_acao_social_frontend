@@ -7,7 +7,7 @@ export const CategorySchema = {
       type: "string",
       enum: ["PUBLIC", "PRIVATE"],
     },
-    categoryGroupId: {
+    categoryGroup: {
       "format": "categoryGroupForCategoryId",
       "type": "string",
       "nullable": false,
