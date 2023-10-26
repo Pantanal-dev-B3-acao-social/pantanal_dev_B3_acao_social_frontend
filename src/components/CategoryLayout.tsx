@@ -22,6 +22,12 @@ const headCells: readonly HeadCell<Data>[] = [
     disablePadding: false,
     label: "Descrição",
   },
+  {
+    id: "categoryGroup.name",
+    numeric: false,
+    disablePadding: false,
+    label: "Grupo",
+  },
 ];
 
 function Category() {

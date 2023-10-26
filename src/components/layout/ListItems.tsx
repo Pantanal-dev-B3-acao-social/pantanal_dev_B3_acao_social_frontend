@@ -90,7 +90,7 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/SocialAction">
+    <Link to="/acao-social">
       <ListItemButton>
         <ListItemIcon>
           <VolunteerActivismIcon />
@@ -98,7 +98,7 @@ export const mainListItems = (
         <ListItemText primary="Ação Social" />
       </ListItemButton>
     </Link>
-    <Link to="/section">
+    <Link to="/sessao">
       <ListItemButton>
         <ListItemIcon>
           <AccessTimeIcon />
