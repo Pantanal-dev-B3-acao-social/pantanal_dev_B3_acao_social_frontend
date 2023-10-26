@@ -45,8 +45,8 @@ export class GenericApi implements FormApi {
         const itemStructured = { ...item, details: details };
         result.push(itemStructured);
       });
-      console.log(result)
-      console.log(response?.data?.content);
+      // console.log(result)
+      // console.log(response?.data?.content);
       return result;
       // return response?.data?.content;
     } catch (error: AxiosError | any) {
