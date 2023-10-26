@@ -36,8 +36,8 @@ const App = () => {
                 />
                 <Route path="/categoria" element={<CategoryLayout />} />
                 <Route path="/ong" element={<OngLayout />} />
-                <Route path="/SocialAction" element={<SocialActionLayout />} />
-                <Route path="/section" element={<SectionLayout />} />
+                <Route path="/acao-social" element={<SocialActionLayout />} />
+                <Route path="/sessao" element={<SectionLayout />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
