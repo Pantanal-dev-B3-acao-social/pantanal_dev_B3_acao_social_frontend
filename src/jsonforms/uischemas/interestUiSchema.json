@@ -4,12 +4,12 @@
     {
       "type": "Control",
       "label": "Pessoa",
-      "scope": "#/properties/person"
+      "scope": "#/properties/personId"
     },
     {
       "type": "Control",
       "label": "Categoria",
-      "scope": "#/properties/category"
+      "scope": "#/properties/categoryId"
     }
   ]
 }

@@ -4,6 +4,12 @@ export const personSchema = {
     name: { type: "string" },
     dateBirth: { type: "string" },
     cpf: {type: "string" },
+    status: {
+      type: "string",
+      enum: ["DEFAULTER", "SUPPLIER", "SUSPENDED", "REGULAR"],
+    },
+    userId: { type: "string" }
+    
   },
-  required: ["name, dateBirth, cpf"],
+  required: ["name, dateBirth, cpf, status"],
 };

@@ -22,6 +22,12 @@ const headCells = [
     disablePadding: false,
     label: "CPF",
   },
+  {
+    id: "status",
+    numeric: false,
+    disablePadding: false,
+    label: "Status",
+  },
 ];
 
 function PersonLayout() {

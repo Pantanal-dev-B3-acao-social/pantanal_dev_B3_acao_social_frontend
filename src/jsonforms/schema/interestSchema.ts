@@ -1,18 +1,18 @@
 export const interestSchema = {
   type: "object",
   properties: {
-    person: {
+    personId: {
       "format": "personId",
       "type": "string",
       "nullable": false,
       "foreignRoute": "person"
     },
-    category: {
+    categoryId: {
       "format": "categoryId",
       "type": "string",
       "nullable": false,
       "foreignRoute": "category"
     },
   },
-  required: ["person", "category"]
+  required: ["personId", "categoryId"]
 }
