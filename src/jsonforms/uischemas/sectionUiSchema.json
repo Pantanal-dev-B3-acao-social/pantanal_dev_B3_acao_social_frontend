@@ -3,17 +3,17 @@
   "elements": [
     {
       "type": "Control",
-      "label": "Description",
+      "label": "Descrição",
       "scope": "#/properties/description"
     },
     {
       "type": "Control",
-      "label": "DateStartTime",
+      "label": "Data e hora de início",
       "scope": "#/properties/dateStartTime"
     },
     {
       "type": "Control",
-      "label": "DateEndTime",
+      "label": "Data e hora de fim",
       "scope": "#/properties/dateEndTime"
     },
     {
@@ -23,8 +23,18 @@
     },
     {
       "type": "Control",
-      "label": "Visibility",
+      "label": "Visibilidade",
       "scope": "#/properties/visibility"
+    },
+    {
+      "type": "Control",
+      "label": "Pontuação de engajamento",
+      "scope": "#/properties/engagementScore"
+    },
+    {
+      "type": "Control",
+      "label": "Ação Social",
+      "scope": "#/properties/socialAction"
     }
   ]
 }

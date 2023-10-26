@@ -39,6 +39,7 @@ export const categoryGroupRender = {
             name="group-category"
             id="group-category"
             value={props.data || 'Escolha'}
+          // value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             <option value="">Selecione uma opção</option>
             {apiListData.map((item: any) => (

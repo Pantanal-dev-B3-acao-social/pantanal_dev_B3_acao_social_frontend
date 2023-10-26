@@ -21,7 +21,8 @@ export const CategoryGroupSchema = {
         },
         createdDate: {
           "type": "string",
-          "format": "date-time", "ui:readonly": true,
+          "format": "date-time",
+          "ui:readonly": true,
           "options": {
             "ui:readonly": true
           }
