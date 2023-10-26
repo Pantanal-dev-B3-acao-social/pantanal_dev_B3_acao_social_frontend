@@ -51,7 +51,7 @@ export const categoryGroupRender = {
           onChange={(event) => {
             console.log(event.target.value);
             console.log(props)
-            props.handleChange("parentCategoryGroupId", event.target.value);
+            props.handleChange("parentCategoryGroup", event.target.value);
           }}
           value={props.data ? (props.data.id ? props.data.id : props.data) : ''}
           inputProps={{
