@@ -7,7 +7,7 @@ export const CategoryGroupSchema = {
       type: "string",
       enum: ["PUBLIC_INTERNALLY", "PUBLIC_EXTERNALLY", "PRIVATE"],
     },
-    parentCategoryGroup: {
+    parentCategoryGroupId: {
       "format": "parentCategoryGroupId",
       "type": "string",
       "nullable": true,
