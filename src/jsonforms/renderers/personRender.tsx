@@ -38,7 +38,7 @@ export const personRender = {
             onChange={(event) => props.handleChange("person", event.target.value)}
             name="person"
             id="person"
-            value={props.data}
+            value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>

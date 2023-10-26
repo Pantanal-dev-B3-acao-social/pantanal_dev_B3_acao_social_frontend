@@ -3,6 +3,7 @@ import { withJsonFormsControlProps } from "@jsonforms/react";
 import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const isSocialAction = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "socialActionId";
@@ -17,6 +18,8 @@ export const socialActionRender = {
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
     const apiUrl = "/social";
+    const [selectedValue, setSelectedValue] = React.useState(null);
+
     React.useEffect(() => {
       if (apiUrl && !api) {
         const apiInstance = makeApi(apiUrl);
@@ -31,26 +34,34 @@ export const socialActionRender = {
         });
       }
     }, [api, list]);
+
     return (
-      <>
-        {apiListData && apiListData.length > 0 ? (
-          <select
-            onChange={(event) => props.handleChange("socialAction", event.target.value)}
-            name="social-action"
-            id="social-action"
-            value={props.data || 'Escolha'}
-          >
-            <option value="">Selecione uma opção</option>
-            {apiListData.map((item: any) => (
-              <option key={item.id} value={item.id}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <p>Nenhum dado disponível.</p>
-        )}
-      </>
+      <FormControl style={{ width: '100%' }} >
+        <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
+          Selecione uma opção
+        </InputLabel>
+        <Select
+          onChange={(event) => {
+            console.log(event.target.value);
+            props.handleChange("socialAction", event.target.value)
+          }}
+          value={props.data && props.data.id ? props.data.id : ""}
+          inputProps={{
+            name: 'social-action',
+            id: 'social-action',
+          }}
+          style={{ width: '100%' }}
+        >
+          <MenuItem value="">
+            <em>Selecione uma opção</em>
+          </MenuItem>
+          {apiListData.map((item: any) => (
+            <MenuItem key={item.id} value={item.id}>
+              {item.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     );
   }),
 };

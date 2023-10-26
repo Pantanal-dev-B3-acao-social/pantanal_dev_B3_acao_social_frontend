@@ -38,7 +38,7 @@ export const categoryRender = {
             onChange={(event) => props.handleChange("category", event.target.value)}
             name="category"
             id="category"
-            value={props.data}
+            value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>

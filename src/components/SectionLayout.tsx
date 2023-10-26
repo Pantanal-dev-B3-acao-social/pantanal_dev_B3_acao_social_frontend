@@ -15,10 +15,10 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "description",
+    id: "socialAction.name",
     numeric: false,
     disablePadding: false,
-    label: "Descrição",
+    label: "Ação social",
   },
   {
     id: "dateStartTime",
