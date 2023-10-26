@@ -7,6 +7,10 @@ export const personSchema = {
       "format": "date-time"
     },
     cpf: { type: "string" },
+    status: {
+      type: "string",
+      enum: ["DEFAULTER", "SUPPLIER", "SUSPENDED", "REGULAR"],
+    },
   },
-  required: ["name, dateBirth, cpf"],
+  required: ["name", "dateBirth", "cpf", "status"],
 };

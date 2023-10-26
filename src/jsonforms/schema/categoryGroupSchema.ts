@@ -7,12 +7,35 @@ export const CategoryGroupSchema = {
       type: "string",
       enum: ["PUBLIC_INTERNALLY", "PUBLIC_EXTERNALLY", "PRIVATE"],
     },
-    categoryGroupId: {
-      "format": "categoryGroupId",
+    parentCategoryGroupId: {
+      "format": "parentCategoryGroupId",
       "type": "string",
-      "nullable": false,
+      "nullable": true,
       "foreignRoute": "category-group"
     },
+    details: {
+      type: "object",
+      properties: {
+        createdBy: {
+          type: "string",
+        },
+        createdDate: {
+          "type": "string",
+          "format": "date-time",
+          "ui:readonly": true,
+          "options": {
+            "ui:readonly": true
+          }
+        },
+        lastModifiedBy: { type: "string", "ui:readonly": true },
+        lastModifiedDate: {
+          "type": "string",
+          "format": "date-time", "ui:readonly": true
+        },
+      }
+    }
   },
   required: ["name", "description", "visibility"],
+  propertiesReadOnly: ["details"],
 };
+

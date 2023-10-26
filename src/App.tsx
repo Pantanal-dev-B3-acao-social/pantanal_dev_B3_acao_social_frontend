@@ -13,6 +13,7 @@ import CategoryLayout from "./components/CategoryLayout";
 import SocialActionLayout from "./components/SocialActionLayout";
 import SectionLayout from "./components/SectionLayout";
 import Login from "./components/login/Login";
+import InterestLayout from "./components/InterestLayout";
 
 const App = () => {
   return (
@@ -36,8 +37,9 @@ const App = () => {
                 />
                 <Route path="/categoria" element={<CategoryLayout />} />
                 <Route path="/ong" element={<OngLayout />} />
-                <Route path="/SocialAction" element={<SocialActionLayout />} />
-                <Route path="/section" element={<SectionLayout />} />
+                <Route path="/interest" element={<InterestLayout />} />
+                <Route path="/acao-social" element={<SocialActionLayout />} />
+                <Route path="/sessao" element={<SectionLayout />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

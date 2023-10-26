@@ -10,7 +10,7 @@ const isPerson = schemaMatches((schema) => {
 
 const personTester = rankWith(5, isPerson);
 
-export const PersonRender = {
+export const personRender = {
   tester: personTester,
   renderer: withJsonFormsControlProps((props) => {
     const [list, setList] = React.useState(true);
@@ -26,7 +26,6 @@ export const PersonRender = {
 
     React.useEffect(() => {
       if (list) {
-        console.log("oi");
         api?.getAll?.().then((data: any) => {
           setApiListData(data);
         });
@@ -36,10 +35,10 @@ export const PersonRender = {
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            onChange={(event) => props.handleChange("Person", event.target.value)}
+            onChange={(event) => props.handleChange("person", event.target.value)}
             name="person"
             id="person"
-            value={props.data}
+            value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>

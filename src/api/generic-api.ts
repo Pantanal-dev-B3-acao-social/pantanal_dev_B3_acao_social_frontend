@@ -1,6 +1,7 @@
 // import { JsonSchema } from "@jsonforms/core";
 import { AxiosError, AxiosResponse } from "axios";
 import { instanceAxios } from "../config/axios-config";
+import { forEach } from "lodash";
 
 export interface FormApi {
   // getSchema: () => Promise<JsonSchema>;
@@ -24,7 +25,30 @@ export class GenericApi implements FormApi {
       const response: AxiosResponse<any, any> = await instanceAxios.get<any>(
         `${this.url}`
       );
-      return response?.data?.content;
+      // let result = { content: [] };
+      let result: any[] = [];
+      response?.data?.content.forEach((item: any) => {
+        const details = {
+          createdBy: item.createdBy,
+          createdDate: item.createdDate,
+          lastModifiedBy: item.lastModifiedBy,
+          lastModifiedDate: item.lastModifiedDate,
+          deletedBy: item.deletedBy,
+          deletedDate: item.deletedDate,
+        };
+        delete item.createdBy;
+        delete item.createdDate;
+        delete item.lastModifiedBy;
+        delete item.lastModifiedDate;
+        delete item.deletedBy;
+        delete item.deletedDate;
+        const itemStructured = { ...item, details: details };
+        result.push(itemStructured);
+      });
+      console.log(result)
+      console.log(response?.data?.content);
+      return result;
+      // return response?.data?.content;
     } catch (error: AxiosError | any) {
       console.log("Erro na solicitação Axios:", error.message); // Mensagem de erro
       console.log("Configuração da solicitação:", error.config); // Configuração da solicitação

@@ -11,6 +11,7 @@ import DeleteDialog from "./DeleteDialog";
 import JsonForm from "./JsonForm";
 import "./crud.css";
 import { HeadCell } from "./headCell";
+import { NoAccounts } from "@mui/icons-material";
 
 export function Crud<T extends Record<string, any>>({
   headCells,
@@ -72,7 +73,7 @@ export function Crud<T extends Record<string, any>>({
 
     try {
       if (add) {
-        console.log(formData);
+        // console.log(formData);
         const response = await api?.post?.(formData);
         if (response.status === 201) {
           back();

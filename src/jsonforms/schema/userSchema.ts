@@ -19,27 +19,27 @@ export const UserSchema = {
     attributes: {
       type: "object",
       properties: {
-        cpf:{
+        cpf: {
           type: "string",
-        },    
+        },
       }
     },
     credentials: {
       type: "object",
       properties: {
-          type: {
-            type: "string"
-          },
-          value: {
-            type: "string"
-          },
-          temporary: {
-            type: "boolean"
-          },
+        type: {
+          type: "string"
+        },
+        value: {
+          type: "string"
+        },
+        temporary: {
+          type: "boolean"
+        },
       },
     },
   },
-  required: ["username", "enable", "email", "fistName", "lastName", "attributes", "credentials"],
+  required: ["username", "enable", "email", "firstName", "attributes", "credentials"],
 
 };
 
