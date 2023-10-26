@@ -42,9 +42,11 @@ export const socialActionRender = {
         </InputLabel>
         <Select
           onChange={(event) => {
-            console.log(event.target.value);
-            props.handleChange("socialAction", event.target.value)
+            const selectedValue = event.target.value;
+            // console.log(selectedValue);
+            props.handleChange("socialAction", selectedValue);
           }}
+          // onChange={(event) => props.handleChange("socialAction", event.target.value)}
           value={props.data && props.data.id ? props.data.id : ""}
           inputProps={{
             name: 'social-action',

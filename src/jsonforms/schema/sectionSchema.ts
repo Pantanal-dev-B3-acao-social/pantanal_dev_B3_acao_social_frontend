@@ -3,8 +3,14 @@ export const SectionSchema = {
   properties: {
     description: { type: "string" },
     engagementScore: { type: "number" },
-    dateStartTime: { type: "string" },
-    dateEndTime: { type: "string" },
+    dateStartTime: {
+      type: "string",
+      // "format": "date-time",
+    },
+    dateEndTime: {
+      type: "string",
+      // "format": "date-time" // 2023-10-24T17:17:47.218981841
+    },
     status: {
       type: "string",
       enum: ["OCCURRING", "PENDING", "OPEN", "CLOSED"],
@@ -20,5 +26,5 @@ export const SectionSchema = {
       "foreignRoute": "social"
     },
   },
-  required: ["description", "engagementScore", "status", "visibility"],
+  required: ["description", "engagementScore", "status", "visibility", "socialAction"],
 };
