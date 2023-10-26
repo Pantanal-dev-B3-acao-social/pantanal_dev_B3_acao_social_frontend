@@ -31,21 +31,26 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
-    // console.log(props.data);
-    // console.log(props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha')
+
+    console.log(props.data)
+    // React.useEffect(() => {
+    //   console.log(props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha')
+    //   if (props.data) {
+    //     props.handleChange("parentCategoryGroup", props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha');
+    //   }
+    // }, []);
+
     return (
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            // onChange={(event) => props.handleChange("parentCategoryGroupId", event.target.value)}
             onChange={(event) => {
-              // console.log(event.target.value)
+              console.log(event.target.value);
+              // console.log(props)
               props.handleChange("parentCategoryGroup", event.target.value);
             }}
-            name="group-category"
-            id="group-category"
+            name="group-category"    // quero ver oque ele ta colocando aqui como valor inicial, antes nao dava esse erro, nao faz sentido esse
             value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
-          // value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             <option value="">Selecione uma opção</option>
             {apiListData.map((item: any) => (
