@@ -15,12 +15,6 @@ const headCells = [
     disablePadding: false,
     label: "Ação social",
   },
-  {
-    id: "motivation",
-    numeric: false,
-    disablePadding: false,
-    label: "Motivação",
-  },
   // TODO: com bug Objects are not valid as a React child (found: object with keys {version, id, userId, name, dateBirth, status, cpf, createdBy, createdDate, lastModifiedBy, lastModifiedDate, deletedDate, deletedBy}). If you meant to render a collection of children, use an array instead. at throwOnInvalidObjectType
   // {
   //   id: "approvedBy",

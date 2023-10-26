@@ -21,5 +21,5 @@ export const investmentSchema = {
       "foreignRoute": "company"
     },
   },
-  required: ["valueMoney", "socialActionId", "motivation", "approvedBy", "approvedDate", "companyId"],
+  required: ["valueMoney", "socialActionId", "approvedDate", "companyId"],
 };

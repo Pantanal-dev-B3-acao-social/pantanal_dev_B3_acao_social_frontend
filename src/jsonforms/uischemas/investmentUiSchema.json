@@ -8,16 +8,6 @@
     },
     {
       "type": "Control",
-      "label": "Motivação",
-      "scope": "#/properties/motivation"
-    },
-    {
-      "type": "Control",
-      "label": "Aprovado Por",
-      "scope": "#/properties/approvedBy"
-    },
-    {
-      "type": "Control",
       "label": "Data de Aprovação",
       "scope": "#/properties/approvedDate"
     },
