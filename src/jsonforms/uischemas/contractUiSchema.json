@@ -1,0 +1,53 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Title",
+      "scope": "#/properties/title"
+    },
+    {
+      "type": "Control",
+      "label": "Description",
+      "scope": "#/properties/description"
+    },
+    {
+      "type": "Control",
+      "label": "Justification",
+      "scope": "#/properties/justification"
+    },
+    {
+      "type": "Control",
+      "label": "Status",
+      "scope": "#/properties/status",
+      "options": {
+        "enumOptions": [
+          { "label": "Running", "value": "RUNNING" },
+          { "label": "Created", "value": "CREATED" },
+          { "label": "Drafted", "value": "DRAFTED" },
+          { "label": "Pending", "value": "PENDING" },
+          { "label": "Canceled", "value": "CANCELED" },
+          { "label": "Done", "value": "DONE" },
+          { "label": "Rejected", "value": "REJECTED" },
+          { "label": "Expirated", "value": "EXPIRATED" },
+          { "label": "Expired", "value": "EXPIRED" }
+        ]
+      }
+    },
+    {
+      "type": "Control",
+      "label": "Social Action",
+      "scope": "#/properties/socialActionId"
+    },
+    {
+      "type": "Control",
+      "label": "Company",
+      "scope": "#/properties/company"
+    },
+    {
+      "type": "Control",
+      "label": "ONG",
+      "scope": "#/properties/ong"
+    }
+  ]
+}
