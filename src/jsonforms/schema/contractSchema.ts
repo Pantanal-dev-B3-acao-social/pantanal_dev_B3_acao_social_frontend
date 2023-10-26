@@ -8,7 +8,7 @@ export const ContractSchema = {
       type: "string",
       enum: ["RUNNING", "CREATED", "DRAFTED", "PENDING", "CANCELED", "DONE", "REJECTED", "EXPIRATED", "EXPIRED"],
     },
-    socialAction: {
+    socialActionId: {
       "format": "socialActionId",
       "type": "string",
       "nullable": false,

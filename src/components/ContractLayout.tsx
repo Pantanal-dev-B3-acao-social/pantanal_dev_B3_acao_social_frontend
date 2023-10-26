@@ -1,5 +1,5 @@
 import { ContractSchema } from "../jsonforms/schema/contractSchema";
-import uischema from "../jsonforms/uischemas/categoryUiSchema.json";
+import uischema from "../jsonforms/uischemas/contractUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 

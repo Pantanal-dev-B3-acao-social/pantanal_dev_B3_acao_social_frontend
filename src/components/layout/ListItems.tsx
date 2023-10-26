@@ -15,6 +15,7 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 export const mainListItems = (
   <React.Fragment>
@@ -117,7 +118,7 @@ export const mainListItems = (
     <Link to="/contract">
       <ListItemButton>
         <ListItemIcon>
-          <AutoAwesomeMotionIcon />
+          <AssignmentIcon />
         </ListItemIcon>
         <ListItemText primary="Contract" />
       </ListItemButton>
