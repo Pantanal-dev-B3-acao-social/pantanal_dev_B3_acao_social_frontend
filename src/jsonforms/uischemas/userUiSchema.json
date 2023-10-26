@@ -3,50 +3,61 @@
   "elements": [
     {
       "type": "Control",
-      "scope": "#/properties/username"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/enable"
-    },
-    {
-      "type": "Control",
-      "scope": "#/properties/email"
-    },
-    {
-      "type": "Control",
+      "label": "Primeiro nome",
       "scope": "#/properties/firstName"
     },
     {
       "type": "Control",
+      "label": "Útimo nome",
       "scope": "#/properties/lastName"
     },
     {
+      "type": "Control",
+      "label": "E-mail",
+      "scope": "#/properties/email"
+    },
+
+    {
       "type": "Group",
-      "label": "Attributes",
+      "label": "Atributos",
       "elements": [
         {
           "type": "Control",
+          "label": "CPF",
           "scope": "#/properties/attributes/properties/cpf"
         }
       ]
     },
     {
+      "type": "Control",
+      "label": "Ativo?",
+      "scope": "#/properties/enable"
+    },
+
+    {
+      "type": "Control",
+      "label": "Nome de usuário",
+      "scope": "#/properties/username"
+    },
+    {
       "type": "Group",
-      "label": "Credentials",
-      "elements": [                 
-          {
-            "type": "Control",
-            "scope": "#/properties/credentials/properties/type"
-          },
-          {
-            "type": "Control",
-            "scope": "#/properties/credentials/properties/value"
-          },
-          {
-            "type": "Control",
-            "scope": "#/properties/credentials/properties/temporary"
-          }
+      "label": "Credenciais",
+      "elements": [
+        {
+          "type": "Control",
+          "label": "Tipo",
+          "scope": "#/properties/credentials/properties/type"
+        },
+        {
+          "type": "Control",
+          "label": "Senha",
+          "scope": "#/properties/credentials/properties/value"
+        },
+        {
+          "type": "Control",
+          "label": "Senha temporaria?",
+          "scope": "#/properties/credentials/properties/temporary"
+        }
       ]
     }
   ]
