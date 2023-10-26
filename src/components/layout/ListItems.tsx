@@ -114,5 +114,13 @@ export const mainListItems = (
         <ListItemText primary="Interesse" />
       </ListItemButton>
     </Link>
-  </React.Fragment>
+    <Link to="/contract">
+      <ListItemButton>
+        <ListItemIcon>
+          <AutoAwesomeMotionIcon />
+        </ListItemIcon>
+        <ListItemText primary="Contract" />
+      </ListItemButton>
+    </Link>
+  </React.Fragment >
 );
