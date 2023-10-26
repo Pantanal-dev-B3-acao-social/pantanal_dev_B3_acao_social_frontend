@@ -11,7 +11,7 @@ export const OngSchema = {
       "format": "socialActionId",
       "type": "string",
       "nullable": false,
-      "foreignRoute": "social"
+      "foreignRoute": "social-action"
     },
   },
   required: ["name", "cnpj", "socialActionId"],
