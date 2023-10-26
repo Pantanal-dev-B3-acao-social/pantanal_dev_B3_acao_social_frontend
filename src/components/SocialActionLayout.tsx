@@ -4,7 +4,7 @@ import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
-  id: number;
+  id: string;
   codigo: string;
   nome: string;
   descricao: string;

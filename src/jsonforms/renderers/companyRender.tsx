@@ -8,10 +8,10 @@ const isCompany = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "companyId";
 });
 
-const CompanyTester = rankWith(5, isCompany);
+const companyTester = rankWith(5, isCompany);
 
 export const CompanyRender = {
-  tester: CompanyTester,
+  tester: companyTester,
   renderer: withJsonFormsControlProps((props) => {
     const [list, setList] = React.useState(true);
     const [api, setApi] = React.useState<GenericApi | null>(null);

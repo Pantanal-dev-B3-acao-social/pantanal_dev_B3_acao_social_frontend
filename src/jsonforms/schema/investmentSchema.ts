@@ -3,7 +3,6 @@ export const investmentSchema = {
   properties: {
     valueMoney: { type: "integer" },
     motivation: { type: "string" },
-    approvedBy: { type: "string" },
     approvedDate: {
       "type": "string",
       "format": "date-time"
@@ -12,7 +11,7 @@ export const investmentSchema = {
       "format": "socialActionId",
       "type": "string",
       "nullable": false,
-      "foreignRoute": "social"
+      "foreignRoute": "social-action"
     },
     companyId: {
       "format": "companyId",
