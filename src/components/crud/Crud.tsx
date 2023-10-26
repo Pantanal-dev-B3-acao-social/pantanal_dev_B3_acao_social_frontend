@@ -11,6 +11,7 @@ import DeleteDialog from "./DeleteDialog";
 import JsonForm from "./JsonForm";
 import "./crud.css";
 import { HeadCell } from "./headCell";
+import { NoAccounts } from "@mui/icons-material";
 
 export function Crud<T extends Record<string, any>>({
   headCells,

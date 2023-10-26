@@ -14,6 +14,7 @@ import HandshakeIcon from '@mui/icons-material/Handshake';
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 
 export const mainListItems = (
   <React.Fragment>
@@ -103,6 +104,14 @@ export const mainListItems = (
           <AccessTimeIcon />
         </ListItemIcon>
         <ListItemText primary="Sessão" />
+      </ListItemButton>
+    </Link>
+    <Link to="/interest">
+      <ListItemButton>
+        <ListItemIcon>
+          <AutoAwesomeMotionIcon />
+        </ListItemIcon>
+        <ListItemText primary="Interesse" />
       </ListItemButton>
     </Link>
   </React.Fragment>

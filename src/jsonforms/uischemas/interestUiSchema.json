@@ -1,0 +1,15 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Pessoa",
+      "scope": "#/properties/personId"
+    },
+    {
+      "type": "Control",
+      "label": "Categoria",
+      "scope": "#/properties/categoryId"
+    }
+  ]
+}
