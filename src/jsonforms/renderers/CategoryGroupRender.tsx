@@ -3,6 +3,7 @@ import { withJsonFormsControlProps } from "@jsonforms/react";
 import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const isCategoryGroup = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "parentCategoryGroupId";
@@ -41,28 +42,35 @@ export const categoryGroupRender = {
     // }, []);
 
     return (
-      <>
-        {apiListData && apiListData.length > 0 ? (
-          <select
-            onChange={(event) => {
-              console.log(event.target.value);
-              // console.log(props)
-              props.handleChange("parentCategoryGroup", event.target.value);
-            }}
-            name="group-category"    // quero ver oque ele ta colocando aqui como valor inicial, antes nao dava esse erro, nao faz sentido esse
-            value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
-          >
-            <option value="">Selecione uma opção</option>
-            {apiListData.map((item: any) => (
-              <option key={item.id} value={item.id}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <p>Nenhum dado disponível.</p>
-        )}
-      </>
+      <FormControl style={{ width: '100%' }} >
+        <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
+          Selecione um Grupo de Categoria
+        </InputLabel>
+        {/* {apiListData && apiListData.length > 0 ? ( */}
+        <Select
+          onChange={(event) => {
+            console.log(event.target.value);
+            console.log(props)
+            props.handleChange("parentCategoryGroup", event.target.value);
+          }}
+          // value={props.data && props.data.id ? props.data.id : ""}
+          value={props.data ? (props.data.id ? props.data.id : props.data) : ''}
+          inputProps={{
+            name: 'social-action',
+            id: 'social-action',
+          }}
+          style={{ width: '100%' }}
+        >
+          <MenuItem value="">
+            <em>Selecione uma opção</em>
+          </MenuItem>
+          {apiListData.map((item: any) => (
+            <MenuItem key={item.id} value={item.id}>
+              {item.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     );
   }),
 };
