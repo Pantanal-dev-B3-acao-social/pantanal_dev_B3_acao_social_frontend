@@ -14,12 +14,12 @@
     {
       "type": "Control",
       "label": "Ação Social",
-      "scope": "#/properties/socialActionId"
+      "scope": "#/properties/socialAction"
     },
     {
       "type": "Control",
       "label": "Empresa",
-      "scope": "#/properties/companyId"
+      "scope": "#/properties/company"
     }
   ]
 }
