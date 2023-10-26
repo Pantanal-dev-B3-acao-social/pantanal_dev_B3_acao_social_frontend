@@ -3,6 +3,11 @@ import { personSchema } from "../jsonforms/schema/personSchema";
 import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
+interface Data extends Record<string, any> {
+  nome: string;
+  description: string;
+}
+
 const headCells = [
   {
     id: "name",
@@ -32,12 +37,12 @@ const headCells = [
 
 function PersonLayout() {
   return (
-    <Crud
+    <Crud<Data>
       headCells={headCells}
       title="Pessoa"
       uischema={uischema}
       schema={personSchema}
-      apiUrl="/person" // Endpoint da API para pessoas
+      apiUrl="/person"
     />
   );
 }

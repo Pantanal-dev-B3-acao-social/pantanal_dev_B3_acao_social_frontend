@@ -20,11 +20,6 @@
       "type": "Control",
       "label": "Status",
       "scope": "#/properties/status"
-    },
-    {
-      "type": "Control",
-      "label": "ID usuário",
-      "scope": "#/properties/userId"
     }
   ]
 }
