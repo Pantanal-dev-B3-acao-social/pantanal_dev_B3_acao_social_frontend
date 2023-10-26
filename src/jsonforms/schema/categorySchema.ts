@@ -5,7 +5,7 @@ export const CategorySchema = {
     description: { type: "string" },
     visibility: {
       type: "string",
-      enum: ["PUBLIC", "PRIVATE"],
+      enum: ["PUBLIC_INTERNALLY", "PUBLIC_EXTERNALLY", "PRIVATE"],
     },
     categoryGroup: {
       "format": "categoryGroupForCategoryId",

@@ -35,10 +35,12 @@ export const categoryGroupRender = {
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            onChange={(event) => props.handleChange("categoryGroup", event.target.value)}
+            onChange={(event) => {
+              props.handleChange("categoryGroup", event.target.value);
+            }}
             name="group-category"
             id="group-category"
-            value={props.data && props.data.id ? props.data.id : 'Escolha'}
+            value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
           >
             <option value="">Selecione uma opção</option>
             {apiListData.map((item: any) => (
