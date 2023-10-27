@@ -40,18 +40,6 @@
           "label": "E-mail",
           "scope": "#/properties/keycloakUser/properties/email"
         },
-
-        {
-          "type": "Group",
-          "label": "Atributos",
-          "elements": [
-            {
-              "type": "Control",
-              "label": "CPF",
-              "scope": "#/properties/keycloakUser/properties/attributes/properties/cpf"
-            }
-          ]
-        },
         {
           "type": "Control",
           "label": "Ativo?",

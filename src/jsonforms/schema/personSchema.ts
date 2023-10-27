@@ -31,14 +31,14 @@ export const personSchema = {
         lastName: {
           type: "string",
         },
-        attributes: {
-          type: "object",
-          properties: {
-            cpf: {
-              type: "string",
-            },
-          }
-        },
+        // attributes: {
+        //   type: "object",
+        //   properties: {
+        //     cpf: {
+        //       type: "string",
+        //     },
+        //   }
+        // },
         credentials: {
           type: "object",
           properties: {
