@@ -18,8 +18,8 @@
     },
     {
       "type": "Control",
-      "label": "Ação Social",
-      "scope": "#/properties/socialActionId"
+      "label": "Responsável",
+      "scope": "#/properties/person"
     }
   ]
 }

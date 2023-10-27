@@ -29,6 +29,12 @@ const headCells: readonly HeadCell<Data>[] = [
     disablePadding: false,
     label: "Status",
   },
+  {
+    id: "person.name",
+    numeric: false,
+    disablePadding: false,
+    label: "Reponsavel",
+  },
 ];
 
 function OngLayout() {
