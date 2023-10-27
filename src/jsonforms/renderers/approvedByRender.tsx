@@ -51,7 +51,7 @@ export const personRender = {
           style={{ width: '100%' }}
         >
           <MenuItem value="">
-            <em>Selecione uma opção</em>
+            <em>Selecione uma Pessoa</em>
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>

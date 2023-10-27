@@ -18,7 +18,6 @@ export const socialActionRender = {
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
     const apiUrl = "/social";
-    // const [selectedValue, setSelectedValue] = React.useState(null);
 
     React.useEffect(() => {
       if (apiUrl && !api) {
@@ -38,15 +37,13 @@ export const socialActionRender = {
     return (
       <FormControl style={{ width: '100%' }} >
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
-          Selecione uma opção
+          Selecione uma Ação Social
         </InputLabel>
         <Select
           onChange={(event) => {
             const selectedValue = event.target.value;
-            // console.log(selectedValue);
-            props.handleChange("socialAction", selectedValue);
+            props.handleChange("socialActionId", selectedValue);
           }}
-          // onChange={(event) => props.handleChange("socialAction", event.target.value)}
           value={props.data && props.data.id ? props.data.id : ""}
           inputProps={{
             name: 'social-action',
@@ -55,7 +52,7 @@ export const socialActionRender = {
           style={{ width: '100%' }}
         >
           <MenuItem value="">
-            <em>Selecione uma opção</em>
+            <em>Selecione uma Ação Social</em>
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>
