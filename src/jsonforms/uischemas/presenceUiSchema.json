@@ -11,11 +11,6 @@
       "label": "Sessão",
       "scope": "#/properties/session"
     },
-    {
-      "type": "Control",
-      "label": "Pontos de engajamento",
-      "scope": "#/properties/engagementScore"
-    },
 
     {
       "type": "Control",
@@ -26,6 +21,11 @@
       "type": "Control",
       "label": "Data de Aprovação",
       "scope": "#/properties/approvedDate"
+    },
+    {
+      "type": "Control",
+      "label": "Pontos de engajamento",
+      "scope": "#/properties/engagementScore"
     },
     {
       "type": "Group",

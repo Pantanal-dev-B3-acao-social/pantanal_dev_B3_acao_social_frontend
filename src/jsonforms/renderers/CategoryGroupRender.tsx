@@ -29,7 +29,7 @@ export const categoryGroupRender = {
       }
     }, [api, list]);
     return (
-      <FormControl style={{ width: '100%' }} >
+      <FormControl style={{ width: '100%', marginTop: '10px' }} >
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
           Selecione um Grupo de Categoria
         </InputLabel>
