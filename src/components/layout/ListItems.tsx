@@ -28,14 +28,14 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/usuario">
+    {/* <Link to="/usuario">
       <ListItemButton>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
         <ListItemText primary="Usuários" />
       </ListItemButton>
-    </Link>
+    </Link> */}
 
     <Link to="/pessoa">
       <ListItemButton>
@@ -65,7 +65,7 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    
+
 
     <Link to="/grupo-categoria">
       <ListItemButton>
