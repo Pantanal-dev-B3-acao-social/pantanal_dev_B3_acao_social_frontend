@@ -47,7 +47,7 @@ export const categoryGroupRender = {
           value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
         >
           <MenuItem value="">
-            <em>Selecione uma opção</em>
+            <em>Selecione um Grupo</em>
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>

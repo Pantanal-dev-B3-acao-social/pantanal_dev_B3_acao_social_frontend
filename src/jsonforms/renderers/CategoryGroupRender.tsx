@@ -60,7 +60,7 @@ export const categoryGroupRender = {
           style={{ width: '100%' }}
         >
           <MenuItem value="">
-            <em>Selecione uma opção</em>
+            <em>Selecione um grupo</em>
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>

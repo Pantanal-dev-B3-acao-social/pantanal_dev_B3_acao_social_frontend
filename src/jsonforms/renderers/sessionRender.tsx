@@ -52,7 +52,7 @@ export const sessionRender = {
           style={{ width: '100%' }}
         >
           <MenuItem value="">
-            <em>Selecione uma opção</em>
+            <em>Selecione uma sessão</em>
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>
