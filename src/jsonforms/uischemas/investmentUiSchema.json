@@ -3,16 +3,6 @@
   "elements": [
     {
       "type": "Control",
-      "label": "Valor",
-      "scope": "#/properties/valueMoney"
-    },
-    {
-      "type": "Control",
-      "label": "Data de Aprovação",
-      "scope": "#/properties/approvedDate"
-    },
-    {
-      "type": "Control",
       "label": "Ação Social",
       "scope": "#/properties/socialAction"
     },
@@ -20,6 +10,31 @@
       "type": "Control",
       "label": "Empresa",
       "scope": "#/properties/company"
+    },
+    {
+      "type": "Control",
+      "label": "Valor",
+      "scope": "#/properties/valueMoney"
+    },
+    {
+      "type": "Control",
+      "label": "Data do Investimento",
+      "scope": "#/properties/date"
+    },
+    {
+      "type": "Control",
+      "label": "Motivação",
+      "scope": "#/properties/motivation"
+    },
+    {
+      "type": "Control",
+      "label": "Aprovado Por",
+      "scope": "#/properties/approvedBy"
+    },
+    {
+      "type": "Control",
+      "label": "Data de Aprovação",
+      "scope": "#/properties/approvedDate"
     }
   ]
 }
