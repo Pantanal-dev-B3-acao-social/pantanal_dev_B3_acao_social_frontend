@@ -16,8 +16,10 @@ import Login from "./components/login/Login";
 import InterestLayout from "./components/InterestLayout";
 import ContractLayout from "./components/ContractLayout";
 import PresenceLayout from "./components/PresenceLayout";
+import { useState } from "react";
 
 const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   return (
     <BrowserRouter>
       <Routes>
@@ -27,23 +29,24 @@ const App = () => {
             <Layout>
               <Routes>
                 <Route index element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/usuario" element={<UserLayout />} />
-                <Route path="/voluntario" element={<VoluntaryLayout />} />
-                <Route path="/investimento" element={<InvestmentLayout />} />
-                <Route path="/empresa" element={<CompanyLayout />} />
-                <Route path="/pessoa" element={<PersonLayout />} />
-                <Route
-                  path="/grupo-categoria"
-                  element={<CategoryGroupLayout />}
-                />
-                <Route path="/categoria" element={<CategoryLayout />} />
-                <Route path="/ong" element={<OngLayout />} />
-                <Route path="/interest" element={<InterestLayout />} />
-                <Route path="/acao-social" element={<SocialActionLayout />} />
-                <Route path="/presenca" element={<PresenceLayout />} />
-                <Route path="/sessao" element={<SectionLayout />} />
-                <Route path="/contract" element={<ContractLayout />} />
+                <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+                {isAuthenticated ? (
+                  <>
+                    <Route path="/usuario" element={<UserLayout />} />
+                    <Route path="/voluntario" element={<VoluntaryLayout />} />
+                    <Route path="/investimento" element={<InvestmentLayout />} />
+                    <Route path="/empresa" element={<CompanyLayout />} />
+                    <Route path="/pessoa" element={<PersonLayout />} />
+                    <Route path="/grupo-categoria" element={<CategoryGroupLayout />} />
+                    <Route path="/categoria" element={<CategoryLayout />} />
+                    <Route path="/ong" element={<OngLayout />} />
+                    <Route path="/interest" element={<InterestLayout />} />
+                    <Route path="/acao-social" element={<SocialActionLayout />} />
+                    <Route path="/presenca" element={<PresenceLayout />} />
+                    <Route path="/sessao" element={<SectionLayout />} />
+                    <Route path="/contract" element={<ContractLayout />} />
+                  </>
+                ) : null}
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
