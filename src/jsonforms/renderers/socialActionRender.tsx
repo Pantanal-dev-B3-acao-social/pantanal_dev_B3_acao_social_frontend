@@ -35,16 +35,16 @@ export const socialActionRender = {
     }, [api, list]);
 
     return (
-      <FormControl style={{ width: '100%' }} >
+      <FormControl style={{ width: '100%', marginTop: '10px' }} >
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
           Selecione uma Ação Social
         </InputLabel>
         <Select
           onChange={(event) => {
             const selectedValue = event.target.value;
-            props.handleChange("socialActionId", selectedValue);
+            props.handleChange("socialAction", selectedValue);
           }}
-          value={props.data && props.data.id ? props.data.id : ""}
+          value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
           inputProps={{
             name: 'social-action',
             id: 'social-action',

@@ -16,6 +16,9 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import AccessibleForwardIcon from '@mui/icons-material/AccessibleForward';
+import MedicalInformationIcon from '@mui/icons-material/MedicalInformation';
+import MedicationIcon from '@mui/icons-material/Medication';
 
 export const mainListItems = (
   <React.Fragment>
@@ -133,7 +136,23 @@ export const mainListItems = (
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
-        <ListItemText primary="Contract" />
+        <ListItemText primary="Contrato" />
+      </ListItemButton>
+    </Link>
+    <Link to="/pcd">
+      <ListItemButton>
+        <ListItemIcon>
+          <MedicationIcon />
+        </ListItemIcon>
+        <ListItemText primary="Condição" />
+      </ListItemButton>
+    </Link>
+    <Link to="/PcdPerson">
+      <ListItemButton>
+        <ListItemIcon>
+          <AccessibleForwardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Pcd" />
       </ListItemButton>
     </Link>
   </React.Fragment >

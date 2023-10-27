@@ -3,6 +3,7 @@ import { withJsonFormsControlProps } from "@jsonforms/react";
 import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const isCompany = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "companyId";
@@ -32,24 +33,33 @@ export const companyRender = {
       }
     }, [api, list]);
     return (
-      <>
-        {apiListData && apiListData.length > 0 ? (
-          <select
-            onChange={(event) => props.handleChange("company", event.target.value)}
-            name="company"
-            id="company"
-            value={props.data && props.data.id ? props.data.id : 'Escolha'}
-          >
-            {apiListData.map((item: any) => (
-              <option key={item.id} value={item.id}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <p>Nenhum dado disponível.</p>
-        )}
-      </>
+      <FormControl style={{ width: '100%', marginTop: '10px' }} >
+        <InputLabel htmlFor="company" style={{ marginTop: '10px' }}>
+          Selecione um Empresa
+        </InputLabel>
+        <Select
+          onChange={(event) => {
+            console.log(event.target.value);
+            console.log(props)
+            props.handleChange("company", event.target.value);
+          }}
+          value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
+          inputProps={{
+            name: 'company',
+            id: 'company',
+          }}
+          style={{ width: '100%' }}
+        >
+          <MenuItem value="">
+            <em>Selecione um grupo</em>
+          </MenuItem>
+          {apiListData.map((item: any) => (
+            <MenuItem key={item.id} value={item.id}>
+              {item.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl >
     );
   }),
 };

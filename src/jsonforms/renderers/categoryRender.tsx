@@ -3,6 +3,7 @@ import { withJsonFormsControlProps } from "@jsonforms/react";
 import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const isCategory = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "categoryId";
@@ -32,24 +33,33 @@ export const categoryRender = {
       }
     }, [api, list]);
     return (
-      <>
-        {apiListData && apiListData.length > 0 ? (
-          <select
-            onChange={(event) => props.handleChange("category", event.target.value)}
-            name="category"
-            id="category"
-            value={props.data && props.data.id ? props.data.id : 'Escolha'}
-          >
-            {apiListData.map((item: any) => (
-              <option key={item.id} value={item.id}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <p>Nenhum dado disponível.</p>
-        )}
-      </>
+      <FormControl style={{ width: '100%', marginTop: '10px' }} >
+        <InputLabel htmlFor="category" style={{ marginTop: '10px' }}>
+          Selecione um Categoria
+        </InputLabel>
+        <Select
+          onChange={(event) => {
+            console.log(event.target.value);
+            console.log(props)
+            props.handleChange("category", event.target.value);
+          }}
+          value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
+          inputProps={{
+            name: 'category',
+            id: 'category',
+          }}
+          style={{ width: '100%' }}
+        >
+          <MenuItem value="">
+            <em>Selecione um grupo</em>
+          </MenuItem>
+          {apiListData.map((item: any) => (
+            <MenuItem key={item.id} value={item.id}>
+              {item.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     );
   }),
 };

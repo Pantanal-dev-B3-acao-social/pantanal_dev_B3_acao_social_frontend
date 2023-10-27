@@ -16,6 +16,8 @@ import Login from "./components/login/Login";
 import InterestLayout from "./components/InterestLayout";
 import ContractLayout from "./components/ContractLayout";
 import PresenceLayout from "./components/PresenceLayout";
+import PcdLayout from "./components/PcdLayout";
+import PcdPersonLayout from "./components/PcdPersonLayout";
 import { useState } from "react";
 
 const App = () => {
@@ -45,6 +47,8 @@ const App = () => {
                     <Route path="/presenca" element={<PresenceLayout />} />
                     <Route path="/sessao" element={<SectionLayout />} />
                     <Route path="/contract" element={<ContractLayout />} />
+                    <Route path="/pcd" element={<PcdLayout />} />
+                    <Route path="/pcdPerson" element={<PcdPersonLayout />} />
                   </>
                 ) : null}
                 <Route path="*" element={<NotFound />} />

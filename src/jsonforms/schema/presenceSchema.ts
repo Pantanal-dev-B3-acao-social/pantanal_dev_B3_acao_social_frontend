@@ -13,7 +13,6 @@ export const PresenceSchema = {
       "nullable": false,
       "foreignRoute": "session"
     },
-    engagementScore: { type: "number", "ui:readonly": true, },
     approvedBy: {
       "format": "approvedBy",
       "type": "string",
@@ -26,6 +25,8 @@ export const PresenceSchema = {
       "format": "custom-date-time",
       "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
     },
+    engagementScore: { type: "number" },
+
     details: {
       type: "object",
       properties: {
@@ -49,5 +50,5 @@ export const PresenceSchema = {
     }
 
   },
-  required: ["person", "session"],
+  required: ["person", "session", "approvedBy", "approvedDate"],
 };
