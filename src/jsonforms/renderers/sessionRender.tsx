@@ -5,19 +5,19 @@ import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
-const isPerson = schemaMatches((schema) => {
-  return !isEmpty(schema) && schema.format === "personId";
+const isSession = schemaMatches((schema) => {
+  return !isEmpty(schema) && schema.format === "sessionId";
 });
 
-const personTester = rankWith(5, isPerson);
+const sessionTester = rankWith(5, isSession);
 
-export const personRender = {
-  tester: personTester,
+export const sessionRender = {
+  tester: sessionTester,
   renderer: withJsonFormsControlProps((props) => {
     const [list, setList] = React.useState(true);
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
-    const apiUrl = "/person";
+    const apiUrl = "/session";
     React.useEffect(() => {
       if (apiUrl && !api) {
         const apiInstance = makeApi(apiUrl);
@@ -32,16 +32,17 @@ export const personRender = {
         });
       }
     }, [api, list]);
+
     return (
-      <FormControl style={{ width: '100%' }} >
+      <FormControl style={{ width: '100%', marginTop: '10px' }} >
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
-          Selecione uma Pessoa
+          Selecione uma Sessão
         </InputLabel>
         <Select
           onChange={(event) => {
             console.log(event.target.value);
             console.log(props)
-            props.handleChange("person", event.target.value);
+            props.handleChange("session", event.target.value);
           }}
           value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
           inputProps={{
@@ -55,7 +56,7 @@ export const personRender = {
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>
-              {item.name}
+              {item.socialAction.name + " " + item.dateStartTime + " " + item.dateEndTime}
             </MenuItem>
           ))}
         </Select>

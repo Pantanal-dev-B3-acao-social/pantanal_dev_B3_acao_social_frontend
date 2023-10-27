@@ -46,7 +46,6 @@ export const categoryGroupRender = {
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
           Selecione um Grupo de Categoria
         </InputLabel>
-        {/* {apiListData && apiListData.length > 0 ? ( */}
         <Select
           onChange={(event) => {
             console.log(event.target.value);

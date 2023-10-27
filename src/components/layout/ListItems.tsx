@@ -102,6 +102,16 @@ export const mainListItems = (
         <ListItemText primary="Ação Social" />
       </ListItemButton>
     </Link>
+
+    <Link to="/presenca">
+      <ListItemButton>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Presença" />
+      </ListItemButton>
+    </Link>
+
     <Link to="/sessao">
       <ListItemButton>
         <ListItemIcon>

@@ -15,6 +15,7 @@ import SectionLayout from "./components/SectionLayout";
 import Login from "./components/login/Login";
 import InterestLayout from "./components/InterestLayout";
 import ContractLayout from "./components/ContractLayout";
+import PresenceLayout from "./components/PresenceLayout";
 
 const App = () => {
   return (
@@ -40,6 +41,7 @@ const App = () => {
                 <Route path="/ong" element={<OngLayout />} />
                 <Route path="/interest" element={<InterestLayout />} />
                 <Route path="/acao-social" element={<SocialActionLayout />} />
+                <Route path="/presenca" element={<PresenceLayout />} />
                 <Route path="/sessao" element={<SectionLayout />} />
                 <Route path="/contract" element={<ContractLayout />} />
                 <Route path="*" element={<NotFound />} />

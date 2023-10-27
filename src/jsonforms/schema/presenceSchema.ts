@@ -2,18 +2,18 @@ export const PresenceSchema = {
   type: "object",
   properties: {
     person: {
-      "format": "person",
+      "format": "personId",
       "type": "string",
       "nullable": false,
       "foreignRoute": "person"
     },
     session: {
-      "format": "session",
+      "format": "sessionId",
       "type": "string",
       "nullable": false,
       "foreignRoute": "session"
     },
-    engagementScore: { type: "number" },
+    engagementScore: { type: "number", "ui:readonly": true, },
     approvedBy: { type: "string" },
     approvedDate: { type: "string" },
     details: {
