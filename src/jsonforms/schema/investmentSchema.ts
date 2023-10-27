@@ -5,7 +5,7 @@ export const investmentSchema = {
     motivation: { type: "string" },
     approvedDate: {
       "type": "string",
-      "format": "date-time"
+      // "format": "date-time"
     },
     socialAction: {
       "format": "socialActionId",
