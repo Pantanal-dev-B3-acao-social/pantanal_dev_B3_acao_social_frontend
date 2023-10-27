@@ -33,7 +33,7 @@ export const socialActionRender = {
         });
       }
     }, [api, list]);
-    console.log(props)
+
     return (
       <FormControl style={{ width: '100%' }} >
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
@@ -44,7 +44,6 @@ export const socialActionRender = {
             const selectedValue = event.target.value;
             props.handleChange("socialAction", selectedValue);
           }}
-          // value={props.data && props.data.id ? props.data.id : ""}
           value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
           inputProps={{
             name: 'social-action',
