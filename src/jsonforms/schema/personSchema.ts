@@ -2,7 +2,10 @@ export const personSchema = {
   type: "object",
   properties: {
     name: { type: "string" },
-    dateBirth: { type: "string" },
+    dateBirth: {
+      "type": "string",
+      "format": "date-time"
+    },
     cpf: { type: "string" },
     status: {
       type: "string",

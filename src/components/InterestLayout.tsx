@@ -1,16 +1,18 @@
-import uischema from "../jsonforms/uischemas/investmentUiSchema.json";
+import uischema from "../jsonforms/uischemas/interestUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { interestSchema } from "../jsonforms/schema/interestSchema";
 
+
+
 const headCells = [
   {
-    id: "personId",
+    id: "person.name",
     numeric: false,
     disablePadding: false,
     label: "Pessoa",
   },
   {
-    id: "categoryId",
+    id: "category.name",
     numeric: false,
     disablePadding: false,
     label: "Categoria",
