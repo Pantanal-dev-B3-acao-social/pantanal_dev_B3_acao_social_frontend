@@ -19,7 +19,11 @@ interface LoginResponse {
   error?: string;
 }
 
-const Login: FC = () => {
+interface LoginProps {
+  setIsAuthenticated: (value: boolean) => void;
+}
+
+const Login: FC<LoginProps> = ({ setIsAuthenticated }) => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const {
@@ -30,8 +34,9 @@ const Login: FC = () => {
 
   const login: SubmitHandler<LoginForm> = async (data: LoginForm) => {
     setIsLoading(true);
+
     try {
-      
+
       const response = await instanceAxios.post<LoginResponse>(
         "/auth/login",
         data
@@ -49,6 +54,7 @@ const Login: FC = () => {
         });
         localStorage.setItem("authUserLogged", response.data.access_token!);
         setIsLoading(false);
+        setIsAuthenticated(true);
         navigate("/");
       } else {
         toast.error(response.data.error, {
@@ -66,6 +72,7 @@ const Login: FC = () => {
       console.log(error);
     }
   };
+
 
   return (
     <>
