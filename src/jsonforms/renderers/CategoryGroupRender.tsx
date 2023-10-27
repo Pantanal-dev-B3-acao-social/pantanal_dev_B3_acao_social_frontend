@@ -31,14 +31,20 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
+    // console.log(props.data);
+    // console.log(props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha')
     return (
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            onChange={(event) => props.handleChange("parentCategoryGroupId", event.target.value)}
+            // onChange={(event) => props.handleChange("parentCategoryGroupId", event.target.value)}
+            onChange={(event) => {
+              // console.log(event.target.value)
+              props.handleChange("parentCategoryGroup", event.target.value);
+            }}
             name="group-category"
             id="group-category"
-            value={props.data || 'Escolha'}
+            value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
           // value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             <option value="">Selecione uma opção</option>

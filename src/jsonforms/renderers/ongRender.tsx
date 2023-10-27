@@ -4,19 +4,19 @@ import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
 
-const isCategoryGroup = schemaMatches((schema) => {
-  return !isEmpty(schema) && schema.format === "categoryGroupForCategoryId";
+const isOng = schemaMatches((schema) => {
+  return !isEmpty(schema) && schema.format === "ongId";
 });
 
-const categoryGroupTester = rankWith(5, isCategoryGroup);
+const ongTester = rankWith(5, isOng);
 
-export const categoryGroupRender = {
-  tester: categoryGroupTester,
+export const ongRender = {
+  tester: ongTester,
   renderer: withJsonFormsControlProps((props) => {
     const [list, setList] = React.useState(true);
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
-    const apiUrl = "/category-group";
+    const apiUrl = "/ong";
     React.useEffect(() => {
       if (apiUrl && !api) {
         const apiInstance = makeApi(apiUrl);
@@ -35,14 +35,11 @@ export const categoryGroupRender = {
       <>
         {apiListData && apiListData.length > 0 ? (
           <select
-            onChange={(event) => {
-              props.handleChange("categoryGroup", event.target.value);
-            }}
-            name="group-category"
-            id="group-category"
-            value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
+            onChange={(event) => props.handleChange("ong", event.target.value)}
+            name="ong"
+            id="ong"
+            value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
-            <option value="">Selecione uma opção</option>
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>
                 {item.name}

@@ -10,7 +10,7 @@ const isCompany = schemaMatches((schema) => {
 
 const companyTester = rankWith(5, isCompany);
 
-export const CompanyRender = {
+export const companyRender = {
   tester: companyTester,
   renderer: withJsonFormsControlProps((props) => {
     const [list, setList] = React.useState(true);
@@ -38,7 +38,7 @@ export const CompanyRender = {
             onChange={(event) => props.handleChange("company", event.target.value)}
             name="company"
             id="company"
-            value={props.data}
+            value={props.data && props.data.id ? props.data.id : 'Escolha'}
           >
             {apiListData.map((item: any) => (
               <option key={item.id} value={item.id}>
