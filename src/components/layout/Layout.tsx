@@ -105,7 +105,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Pantanal.dev
+              B3 Social
             </Typography>
             {/* Botão de Login com redirecionamento para a tela de login */}
             <Link to="/login" style={{ textDecoration: "none" }}>
