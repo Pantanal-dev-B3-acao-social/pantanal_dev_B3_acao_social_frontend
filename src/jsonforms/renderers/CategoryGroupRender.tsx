@@ -4,13 +4,10 @@ import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-
 const isCategoryGroup = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "parentCategoryGroupId";
 });
-
 const categoryGroupTester = rankWith(5, isCategoryGroup);
-
 export const categoryGroupRender = {
   tester: categoryGroupTester,
   renderer: withJsonFormsControlProps((props) => {
@@ -24,7 +21,6 @@ export const categoryGroupRender = {
         setApi(apiInstance as any);
       }
     }, [apiUrl, api]);
-
     React.useEffect(() => {
       if (list) {
         api?.getAll?.().then((data: any) => {
@@ -32,15 +28,6 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
-
-    console.log(props.data)
-    // React.useEffect(() => {
-    //   console.log(props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha')
-    //   if (props.data) {
-    //     props.handleChange("parentCategoryGroup", props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha');
-    //   }
-    // }, []);
-
     return (
       <FormControl style={{ width: '100%' }} >
         <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
