@@ -39,7 +39,7 @@ export const ongRender = {
         </InputLabel>
         <Select
           onChange={(event) => {
-            props.handleChange("parentCategoryGroup", event.target.value);
+            props.handleChange("ong", event.target.value);
           }}
           value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
           inputProps={{
@@ -49,7 +49,7 @@ export const ongRender = {
           style={{ width: '100%' }}
         >
           <MenuItem value="">
-            <em>Selecione um grupo</em>
+            <em>Selecione uma Ong</em>
           </MenuItem>
           {apiListData.map((item: any) => (
             <MenuItem key={item.id} value={item.id}>
