@@ -3,6 +3,7 @@ import { withJsonFormsControlProps } from "@jsonforms/react";
 import isEmpty from "lodash/isEmpty";
 import React from "react";
 import { GenericApi, makeApi } from "../../api/generic-api";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const isCategoryGroup = schemaMatches((schema) => {
   return !isEmpty(schema) && schema.format === "parentCategoryGroupId";
@@ -31,33 +32,43 @@ export const categoryGroupRender = {
         });
       }
     }, [api, list]);
-    // console.log(props.data);
-    // console.log(props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha')
+
+    console.log(props.data)
+    // React.useEffect(() => {
+    //   console.log(props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha')
+    //   if (props.data) {
+    //     props.handleChange("parentCategoryGroup", props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha');
+    //   }
+    // }, []);
+
     return (
-      <>
-        {apiListData && apiListData.length > 0 ? (
-          <select
-            // onChange={(event) => props.handleChange("parentCategoryGroupId", event.target.value)}
-            onChange={(event) => {
-              // console.log(event.target.value)
-              props.handleChange("parentCategoryGroup", event.target.value);
-            }}
-            name="group-category"
-            id="group-category"
-            value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
-          // value={props.data && props.data.id ? props.data.id : 'Escolha'}
-          >
-            <option value="">Selecione uma opção</option>
-            {apiListData.map((item: any) => (
-              <option key={item.id} value={item.id}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-        ) : (
-          <p>Nenhum dado disponível.</p>
-        )}
-      </>
+      <FormControl style={{ width: '100%' }} >
+        <InputLabel htmlFor="social-action" style={{ marginTop: '10px' }}>
+          Selecione um Grupo de Categoria
+        </InputLabel>
+        <Select
+          onChange={(event) => {
+            console.log(event.target.value);
+            console.log(props)
+            props.handleChange("parentCategoryGroup", event.target.value);
+          }}
+          value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}
+          inputProps={{
+            name: 'social-action',
+            id: 'social-action',
+          }}
+          style={{ width: '100%' }}
+        >
+          <MenuItem value="">
+            <em>Selecione uma opção</em>
+          </MenuItem>
+          {apiListData.map((item: any) => (
+            <MenuItem key={item.id} value={item.id}>
+              {item.name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     );
   }),
 };

@@ -18,7 +18,7 @@ export const socialActionRender = {
     const [api, setApi] = React.useState<GenericApi | null>(null);
     const [apiListData, setApiListData] = React.useState<any>([]);
     const apiUrl = "/social";
-    const [selectedValue, setSelectedValue] = React.useState(null);
+    // const [selectedValue, setSelectedValue] = React.useState(null);
 
     React.useEffect(() => {
       if (apiUrl && !api) {

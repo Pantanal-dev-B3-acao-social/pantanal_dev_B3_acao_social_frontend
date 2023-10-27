@@ -1,0 +1,57 @@
+{
+  "type": "VerticalLayout",
+  "elements": [
+    {
+      "type": "Control",
+      "label": "Usuário",
+      "scope": "#/properties/person"
+    },
+    {
+      "type": "Control",
+      "label": "Sessão",
+      "scope": "#/properties/session"
+    },
+    {
+      "type": "Control",
+      "label": "Pontos de engajamento",
+      "scope": "#/properties/engagementScore"
+    },
+
+    {
+      "type": "Control",
+      "label": "Aprovado Por",
+      "scope": "#/properties/approvedBy"
+    },
+    {
+      "type": "Control",
+      "label": "Data de Aprovação",
+      "scope": "#/properties/approvedDate"
+    },
+    {
+      "type": "Group",
+      "label": "Detalhes",
+      "elements": [
+        {
+          "type": "Control",
+          "label": "Criado por",
+          "scope": "#/properties/details/properties/createdBy"
+        },
+        {
+          "type": "Control",
+          "label": "Criando em",
+          "scope": "#/properties/details/properties/createdDate"
+        },
+        {
+          "type": "Control",
+          "label": "Modificado por último por",
+          "scope": "#/properties/details/properties/lastModifiedBy"
+        },
+        {
+          "type": "Control",
+          "label": "Modificado por último em",
+          "scope": "#/properties/details/properties/lastModifiedDate"
+        }
+      ]
+    }
+  ]
+}
