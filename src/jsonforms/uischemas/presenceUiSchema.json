@@ -25,10 +25,7 @@
     {
       "type": "Control",
       "label": "Data de Aprovação",
-      "scope": "#/properties/approvedDate",
-      "options": {
-        "format": "date-time"
-      }
+      "scope": "#/properties/approvedDate"
     },
     {
       "type": "Group",

@@ -11,30 +11,37 @@ interface Data extends Record<string, any> {
 
 const headCells: readonly HeadCell<Data>[] = [
   {
-    id: "name",
+    id: "person.name",
     numeric: false,
     disablePadding: false,
-    label: "Nome",
+    label: "Pessoa",
   },
   {
-    id: "description",
+    id: "session.id",
     numeric: false,
     disablePadding: false,
-    label: "Descrição",
+    label: "sessão",
   },
   {
-    id: "presenceGroup.name",
+    id: "approvedBy.name",
     numeric: false,
     disablePadding: false,
-    label: "Grupo",
+    label: "Aprovado por",
   },
+  {
+    id: "approvedDate",
+    numeric: false,
+    disablePadding: false,
+    label: "Aprovado em",
+  },
+
 ];
 
 function Presence() {
   return (
     <Crud<Data>
       headCells={headCells}
-      title="Categoria"
+      title="Presenças"
       uischema={uischema}
       schema={PresenceSchema}
       apiUrl={"/presence"}
