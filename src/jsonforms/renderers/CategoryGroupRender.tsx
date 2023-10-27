@@ -35,8 +35,6 @@ export const categoryGroupRender = {
         </InputLabel>
         <Select
           onChange={(event) => {
-            console.log(event.target.value);
-            console.log(props)
             props.handleChange("parentCategoryGroup", event.target.value);
           }}
           value={props.data ? (props.data.id ? props.data.id : props.data) : 'Escolha'}

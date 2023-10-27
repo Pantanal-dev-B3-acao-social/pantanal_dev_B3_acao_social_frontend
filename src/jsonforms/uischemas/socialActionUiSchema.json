@@ -3,11 +3,18 @@
   "elements": [
     {
       "type": "Control",
+      "label": "Nome",
       "scope": "#/properties/name"
     },
     {
       "type": "Control",
+      "label": "Descrição",
       "scope": "#/properties/description"
+    },
+    {
+      "type": "Control",
+      "label": "ONG",
+      "scope": "#/properties/ong"
     }
   ]
 }
