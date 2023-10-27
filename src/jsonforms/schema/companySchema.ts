@@ -5,5 +5,5 @@ export const companySchema = {
     description: { type: "string" },
     cnpj: { type: "string" },
   },
-  required: ["name, description, cnpj"],
+  required: ["name", "description", "cnpj"],
 };

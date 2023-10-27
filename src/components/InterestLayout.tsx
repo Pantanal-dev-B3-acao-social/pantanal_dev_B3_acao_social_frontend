@@ -2,6 +2,8 @@ import uischema from "../jsonforms/uischemas/interestUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { interestSchema } from "../jsonforms/schema/interestSchema";
 
+
+
 const headCells = [
   {
     id: "person.name",

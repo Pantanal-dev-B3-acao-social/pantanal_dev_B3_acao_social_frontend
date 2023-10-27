@@ -4,8 +4,10 @@ import { Crud } from "./crud/Crud";
 import { HeadCell } from "./crud/headCell";
 
 interface Data extends Record<string, any> {
-  nome: string;
-  description: string;
+  name: string;
+  dateBirth: string;
+  cpf: string;
+  status: boolean;
 }
 
 const headCells = [

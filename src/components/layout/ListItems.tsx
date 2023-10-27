@@ -37,6 +37,16 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
+    <Link to="/pessoa">
+      <ListItemButton>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Pessoa" />
+      </ListItemButton>
+    </Link>
+
+
     <Link to="/investimento">
       <ListItemButton>
         <ListItemIcon>
@@ -55,14 +65,7 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/pessoa">
-      <ListItemButton>
-        <ListItemIcon>
-          <PeopleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Pessoa" />
-      </ListItemButton>
-    </Link>
+    
 
     <Link to="/grupo-categoria">
       <ListItemButton>

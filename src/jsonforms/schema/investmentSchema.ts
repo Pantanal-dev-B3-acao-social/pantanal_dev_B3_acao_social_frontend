@@ -3,18 +3,22 @@ export const investmentSchema = {
   properties: {
     valueMoney: { type: "integer" },
     motivation: { type: "string" },
-    approvedBy: { type: "string" },
     approvedDate: {
       "type": "string",
       "format": "date-time"
     },
-    socialActionId: {
+    socialAction: {
       "format": "socialActionId",
       "type": "string",
       "nullable": false,
-      "foreignRoute": "social"
+      "foreignRoute": "social-action"
     },
-    companyId: { type: "string" },
+    company: {
+      "format": "companyId",
+      "type": "string",
+      "nullable": false,
+      "foreignRoute": "company"
+    },
   },
-  required: ["valueMoney", "socialActionId", "motivation", "approvedBy", "approvedDate", "companyId"],
+  required: ["valueMoney", "socialAction", "approvedDate", "company"],
 };

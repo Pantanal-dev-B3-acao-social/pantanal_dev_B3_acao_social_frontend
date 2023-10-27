@@ -2,6 +2,12 @@ import uischema from "../jsonforms/uischemas/investmentUiSchema.json";
 import { Crud } from "./crud/Crud";
 import { investmentSchema } from "../jsonforms/schema/investmentSchema";
 
+interface Data extends Record<string, any> {
+  id: string;
+  valueMoney: number;
+  approvedDate: Date;
+}
+
 const headCells = [
   {
     id: "valueMoney",
@@ -10,16 +16,10 @@ const headCells = [
     label: "Valor",
   },
   {
-    id: "socialActionId",
+    id: "socialAction.name",
     numeric: false,
     disablePadding: false,
-    label: "Ação social",
-  },
-  {
-    id: "motivation",
-    numeric: false,
-    disablePadding: false,
-    label: "Motivação",
+    label: "Ação Social",
   },
   // TODO: com bug Objects are not valid as a React child (found: object with keys {version, id, userId, name, dateBirth, status, cpf, createdBy, createdDate, lastModifiedBy, lastModifiedDate, deletedDate, deletedBy}). If you meant to render a collection of children, use an array instead. at throwOnInvalidObjectType
   // {
@@ -35,7 +35,7 @@ const headCells = [
     label: "Data de Aprovação",
   },
   {
-    id: "companyId",
+    id: "company.name",
     numeric: false,
     disablePadding: false,
     label: "Empresa",
@@ -44,7 +44,7 @@ const headCells = [
 
 function InvestmentLayout() {
   return (
-    <Crud
+    <Crud<Data>
       headCells={headCells}
       title="Investimentos"
       uischema={uischema}
