@@ -28,14 +28,14 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    <Link to="/usuario">
+    {/* <Link to="/usuario">
       <ListItemButton>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
         <ListItemText primary="Usuários" />
       </ListItemButton>
-    </Link>
+    </Link> */}
 
     <Link to="/pessoa">
       <ListItemButton>
@@ -65,7 +65,7 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
-    
+
 
     <Link to="/grupo-categoria">
       <ListItemButton>
@@ -102,6 +102,16 @@ export const mainListItems = (
         <ListItemText primary="Ação Social" />
       </ListItemButton>
     </Link>
+
+    <Link to="/presenca">
+      <ListItemButton>
+        <ListItemIcon>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Presença" />
+      </ListItemButton>
+    </Link>
+
     <Link to="/sessao">
       <ListItemButton>
         <ListItemIcon>

@@ -20,6 +20,59 @@
       "type": "Control",
       "label": "Status",
       "scope": "#/properties/status"
+    },
+    {
+      "type": "Group",
+      "label": "Usuário",
+      "elements": [
+        {
+          "type": "Control",
+          "label": "Primeiro nome",
+          "scope": "#/properties/keycloakUser/properties/firstName"
+        },
+        {
+          "type": "Control",
+          "label": "Útimo nome",
+          "scope": "#/properties/keycloakUser/properties/lastName"
+        },
+        {
+          "type": "Control",
+          "label": "E-mail",
+          "scope": "#/properties/keycloakUser/properties/email"
+        },
+        {
+          "type": "Control",
+          "label": "Ativo?",
+          "scope": "#/properties/keycloakUser/properties/enable"
+        },
+
+        {
+          "type": "Control",
+          "label": "Nome de usuário",
+          "scope": "#/properties/keycloakUser/properties/username"
+        },
+        {
+          "type": "Group",
+          "label": "Credenciais",
+          "elements": [
+            {
+              "type": "Control",
+              "label": "Tipo",
+              "scope": "#/properties/keycloakUser/properties/credentials/properties/type"
+            },
+            {
+              "type": "Control",
+              "label": "Senha",
+              "scope": "#/properties/keycloakUser/properties/credentials/properties/value"
+            },
+            {
+              "type": "Control",
+              "label": "Senha temporaria?",
+              "scope": "#/properties/keycloakUser/properties/credentials/properties/temporary"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
