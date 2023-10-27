@@ -3,6 +3,13 @@ export const SocialActionSchema = {
   properties: {
     name: { type: "string" },
     description: { type: "string" },
+    ong: {
+      "format": "ongId",
+      "type": "string",
+      "nullable": false,
+      "foreignRoute": "ong"
+    },
   },
-  required: ["name"],
+
+  required: ["name", "ong"],
 };

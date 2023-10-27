@@ -23,6 +23,12 @@ const headCells: readonly HeadCell<Data>[] = [
     disablePadding: false,
     label: "Descrição",
   },
+  {
+    id: "ong.name",
+    numeric: false,
+    disablePadding: false,
+    label: "Ong",
+  },
 ];
 
 function SocialAction() {
