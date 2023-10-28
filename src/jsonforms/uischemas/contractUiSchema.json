@@ -37,7 +37,7 @@
     {
       "type": "Control",
       "label": "Social Action",
-      "scope": "#/properties/socialActionId"
+      "scope": "#/properties/socialAction"
     },
     {
       "type": "Control",

@@ -21,37 +21,6 @@
       "type": "Control",
       "label": "Data de Aprovação",
       "scope": "#/properties/approvedDate"
-    },
-    {
-      "type": "Control",
-      "label": "Pontos de engajamento",
-      "scope": "#/properties/engagementScore"
-    },
-    {
-      "type": "Group",
-      "label": "Detalhes",
-      "elements": [
-        {
-          "type": "Control",
-          "label": "Criado por",
-          "scope": "#/properties/details/properties/createdBy"
-        },
-        {
-          "type": "Control",
-          "label": "Criando em",
-          "scope": "#/properties/details/properties/createdDate"
-        },
-        {
-          "type": "Control",
-          "label": "Modificado por último por",
-          "scope": "#/properties/details/properties/lastModifiedBy"
-        },
-        {
-          "type": "Control",
-          "label": "Modificado por último em",
-          "scope": "#/properties/details/properties/lastModifiedDate"
-        }
-      ]
     }
   ]
 }

@@ -33,6 +33,12 @@ const headCells: readonly HeadCell<Data>[] = [
     label: "DataFinal",
   },
   {
+    id: "engagementScore",
+    numeric: false,
+    disablePadding: false,
+    label: "Pontos",
+  },
+  {
     id: "status",
     numeric: false,
     disablePadding: false,

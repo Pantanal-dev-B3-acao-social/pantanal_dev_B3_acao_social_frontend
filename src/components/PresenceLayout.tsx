@@ -34,6 +34,12 @@ const headCells: readonly HeadCell<Data>[] = [
     disablePadding: false,
     label: "Aprovado em",
   },
+  {
+    id: "engagementScore",
+    numeric: false,
+    disablePadding: false,
+    label: "Pontos",
+  },
 
 ];
 
