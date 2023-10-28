@@ -13,6 +13,11 @@
     },
     {
       "type": "Control",
+      "label": "Pontuação de milhagem",
+      "scope": "#/properties/engagementScore"
+    },
+    {
+      "type": "Control",
       "label": "CPF",
       "scope": "#/properties/cpf"
     },

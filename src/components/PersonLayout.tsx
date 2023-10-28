@@ -30,6 +30,12 @@ const headCells = [
     label: "CPF",
   },
   {
+    id: "engagementScore",
+    numeric: false,
+    disablePadding: false,
+    label: "Pontos",
+  },
+  {
     id: "status",
     numeric: false,
     disablePadding: false,

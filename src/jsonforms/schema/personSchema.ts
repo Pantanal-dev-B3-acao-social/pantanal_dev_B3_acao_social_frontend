@@ -8,6 +8,7 @@ export const personSchema = {
       "format": "custom-date-time",
       "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
     },
+    engagementScore: { type: "integer" },
     cpf: { type: "string" },
     status: {
       type: "string",
