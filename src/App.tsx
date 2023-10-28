@@ -46,7 +46,6 @@ const App = () => {
                     <Route path="/acao-social" element={<SocialActionLayout />} />
                     <Route path="/presenca" element={<PresenceLayout />} />
                     <Route path="/sessao" element={<SectionLayout />} />
-                    <Route path="/contract" element={<ContractLayout />} />
                     <Route path="/pcd" element={<PcdLayout />} />
                     <Route path="/pcdPerson" element={<PcdPersonLayout />} />
                   </>
@@ -60,5 +59,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
+//<Route path="/contract" element={<ContractLayout />} />
 export default App;

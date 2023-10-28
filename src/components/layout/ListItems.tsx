@@ -131,14 +131,14 @@ export const mainListItems = (
         <ListItemText primary="Interesse" />
       </ListItemButton>
     </Link>
-    <Link to="/contract">
+    {/* <Link to="/contract">
       <ListItemButton>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
         <ListItemText primary="Contrato" />
       </ListItemButton>
-    </Link>
+    </Link> */}
     <Link to="/pcd">
       <ListItemButton>
         <ListItemIcon>
